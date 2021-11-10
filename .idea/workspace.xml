@@ -11,9 +11,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7d051204-9ed8-4708-93c0-c8ec42373969" name="Changes" comment="b">
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-    </list>
+    <list default="true" id="7d051204-9ed8-4708-93c0-c8ec42373969" name="Changes" comment="test b" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -77,7 +75,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1636570291357</updated>
-      <workItem from="1636570292654" duration="1261000" />
+      <workItem from="1636570292654" duration="2155000" />
     </task>
     <task id="LOCAL-00001" summary="b">
       <created>1636570488776</created>
@@ -100,7 +98,28 @@
       <option name="project" value="LOCAL" />
       <updated>1636570697396</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="test b">
+      <created>1636571575323</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1636571575323</updated>
+    </task>
+    <task id="LOCAL-00005" summary="test b">
+      <created>1636571860798</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1636571860798</updated>
+    </task>
+    <task id="LOCAL-00006" summary="test b">
+      <created>1636572391399</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1636572391399</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -117,7 +136,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="DMM" />
+                        <option value="origin/DMM" />
                       </list>
                     </value>
                   </entry>
@@ -132,6 +151,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="b" />
-    <option name="LAST_COMMIT_MESSAGE" value="b" />
+    <MESSAGE value="test b" />
+    <option name="LAST_COMMIT_MESSAGE" value="test b" />
   </component>
 </project>
