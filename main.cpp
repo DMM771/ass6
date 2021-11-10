@@ -5,7 +5,6 @@ int main() {
     float l[] = {1,2,3,4,5,6,7,8,9};
     float p = var(l,9);
     std::cout << p << std::endl;
-//this is a test
-
+//change12
     return 0;
 }
