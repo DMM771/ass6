@@ -6,5 +6,6 @@ int main() {
     float p = var(l,9);
     std::cout << p << std::endl;
 // ready to work
+//ready
     return 0;
 }
