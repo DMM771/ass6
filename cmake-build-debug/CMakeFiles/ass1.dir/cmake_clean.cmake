@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/ass1.dir/MainTrain.cpp.obj"
+  "CMakeFiles/ass1.dir/SimpleAnomalyDetector.cpp.obj"
   "CMakeFiles/ass1.dir/anomaly_detection_util.cpp.obj"
-  "CMakeFiles/ass1.dir/main.cpp.obj"
+  "CMakeFiles/ass1.dir/timeseries.cpp.obj"
   "ass1.exe"
   "ass1.exe.manifest"
   "ass1.pdb"
