@@ -11,8 +11,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7d051204-9ed8-4708-93c0-c8ec42373969" name="Changes" comment="b">
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+    <list default="true" id="7d051204-9ed8-4708-93c0-c8ec42373969" name="Changes" comment="lets begin">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +101,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636570697396</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="lets begin">
+      <created>1636573731147</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1636573731147</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -117,7 +125,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="DMM" />
+                        <option value="origin/DMM" />
                       </list>
                     </value>
                   </entry>
@@ -128,10 +136,12 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="b" />
-    <option name="LAST_COMMIT_MESSAGE" value="b" />
+    <MESSAGE value="lets begin" />
+    <option name="LAST_COMMIT_MESSAGE" value="lets begin" />
   </component>
 </project>
