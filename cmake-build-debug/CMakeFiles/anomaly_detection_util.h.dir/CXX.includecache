@@ -1,0 +1,68 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/dmmon/Desktop/Computer Science/year 2/Semester 1/Advanced programing 1/AS/AnomalyDetector.h
+string
+-
+vector
+-
+timeseries.h
+C:/Users/dmmon/Desktop/Computer Science/year 2/Semester 1/Advanced programing 1/AS/timeseries.h
+math.h
+C:/Users/dmmon/Desktop/Computer Science/year 2/Semester 1/Advanced programing 1/AS/math.h
+
+C:/Users/dmmon/Desktop/Computer Science/year 2/Semester 1/Advanced programing 1/AS/MainTrain.cpp
+iostream
+-
+vector
+-
+AnomalyDetector.h
+C:/Users/dmmon/Desktop/Computer Science/year 2/Semester 1/Advanced programing 1/AS/AnomalyDetector.h
+SimpleAnomalyDetector.h
+C:/Users/dmmon/Desktop/Computer Science/year 2/Semester 1/Advanced programing 1/AS/SimpleAnomalyDetector.h
+fstream
+-
+stdlib.h
+-
+time.h
+-
+math.h
+-
+
+C:/Users/dmmon/Desktop/Computer Science/year 2/Semester 1/Advanced programing 1/AS/SimpleAnomalyDetector.cpp
+SimpleAnomalyDetector.h
+C:/Users/dmmon/Desktop/Computer Science/year 2/Semester 1/Advanced programing 1/AS/SimpleAnomalyDetector.h
+
+C:/Users/dmmon/Desktop/Computer Science/year 2/Semester 1/Advanced programing 1/AS/SimpleAnomalyDetector.h
+anomaly_detection_util.h
+C:/Users/dmmon/Desktop/Computer Science/year 2/Semester 1/Advanced programing 1/AS/anomaly_detection_util.h
+AnomalyDetector.h
+C:/Users/dmmon/Desktop/Computer Science/year 2/Semester 1/Advanced programing 1/AS/AnomalyDetector.h
+vector
+-
+algorithm
+-
+string.h
+-
+math.h
+-
+
+C:/Users/dmmon/Desktop/Computer Science/year 2/Semester 1/Advanced programing 1/AS/anomaly_detection_util.cpp
+anomaly_detection_util.h
+C:/Users/dmmon/Desktop/Computer Science/year 2/Semester 1/Advanced programing 1/AS/anomaly_detection_util.h
+cmath
+-
+
+C:/Users/dmmon/Desktop/Computer Science/year 2/Semester 1/Advanced programing 1/AS/anomaly_detection_util.h
+
+C:/Users/dmmon/Desktop/Computer Science/year 2/Semester 1/Advanced programing 1/AS/timeseries.cpp
+timeseries.h
+C:/Users/dmmon/Desktop/Computer Science/year 2/Semester 1/Advanced programing 1/AS/timeseries.h
+
+C:/Users/dmmon/Desktop/Computer Science/year 2/Semester 1/Advanced programing 1/AS/timeseries.h
+

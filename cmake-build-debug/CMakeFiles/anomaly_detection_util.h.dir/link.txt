@@ -1,0 +1,3 @@
+"C:\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\anomaly_detection_util.h.dir/objects.a
+C:\MinGW\bin\ar.exe cr CMakeFiles\anomaly_detection_util.h.dir/objects.a @CMakeFiles\anomaly_detection_util.h.dir\objects1.rsp
+C:\MinGW\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\anomaly_detection_util.h.dir/objects.a -Wl,--no-whole-archive -o anomaly_detection_util.h.exe -Wl,--out-implib,libanomaly_detection_util.h.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\anomaly_detection_util.h.dir\linklibs.rsp
