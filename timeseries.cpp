@@ -34,6 +34,8 @@ TimeSeries::TimeSeries(const char* CSVfileName){
     }
 
     for (int i = 0; i < result.size(); i++) {
+        cout << "column name is: " << result[i].first;
+        cout << endl;
         for (int j = 0; j < result[i].second.size(); j++) {
             cout << result[i].second[j] << " ";
         }
