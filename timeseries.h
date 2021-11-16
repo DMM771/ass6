@@ -9,7 +9,7 @@
 using namespace std;
 
 class TimeSeries{
-private:
+public:
     vector<pair<string,vector<float>>> result;
 public:
 
