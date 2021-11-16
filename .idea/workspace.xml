@@ -11,20 +11,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7d051204-9ed8-4708-93c0-c8ec42373969" name="Changes" comment="lets begin">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ass1.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ass1.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ass1.dir/MainTrain.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ass1.dir/MainTrain.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ass1.dir/SimpleAnomalyDetector.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ass1.dir/SimpleAnomalyDetector.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ass1.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ass1.dir/objects.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ass1.dir/timeseries.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ass1.dir/timeseries.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/ass1.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/ass1.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/testFile1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/testFile1.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/trainFile1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/trainFile1.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/timeseries.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/timeseries.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/timeseries.h" beforeDir="false" afterPath="$PROJECT_DIR$/timeseries.h" afterDir="false" />
-    </list>
+    <list default="true" id="7d051204-9ed8-4708-93c0-c8ec42373969" name="Changes" comment="finished first half of pre-computing" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -87,7 +74,7 @@
       <workItem from="1636649334952" duration="14000" />
       <workItem from="1636651130532" duration="1946000" />
       <workItem from="1636902387879" duration="13000" />
-      <workItem from="1636993320457" duration="10385000" />
+      <workItem from="1636993320457" duration="29600000" />
     </task>
     <task id="LOCAL-00001" summary="b">
       <created>1636570488776</created>
@@ -131,7 +118,35 @@
       <option name="project" value="LOCAL" />
       <updated>1636621081171</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="lets begin">
+      <created>1637006168567</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1637006168567</updated>
+    </task>
+    <task id="LOCAL-00008" summary="I have made progress!">
+      <created>1637006203747</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1637006203747</updated>
+    </task>
+    <task id="LOCAL-00009" summary="I have made progress!">
+      <created>1637006576218</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1637006576218</updated>
+    </task>
+    <task id="LOCAL-00010" summary="finished first half of pre-computing">
+      <created>1637071746698</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1637071746698</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -165,6 +180,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="b" />
     <MESSAGE value="lets begin" />
-    <option name="LAST_COMMIT_MESSAGE" value="lets begin" />
+    <MESSAGE value="I have made progress!" />
+    <MESSAGE value="finished first half of pre-computing" />
+    <option name="LAST_COMMIT_MESSAGE" value="finished first half of pre-computing" />
   </component>
 </project>
