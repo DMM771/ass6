@@ -2,15 +2,18 @@
 
 #ifndef TIMESERIES_H_
 #define TIMESERIES_H_
-
+#include "iostream"
+#include <fstream>
+#include <vector>
+#include <sstream>
 using namespace std;
 
 class TimeSeries{
-
+private:
+    vector<pair<string,vector<float>>> result;
 public:
 
-    TimeSeries(const char* CSVfileName){
-    }
+    TimeSeries(const char* CSVfileName);
 
 };
 
