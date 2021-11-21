@@ -27,7 +27,7 @@ void SimpleAnomalyDetector::learnNormal(const TimeSeries& ts){
             auto * aNonConst = const_cast<float *>(a);
             float const *b = ts.result[j].second.data();
             auto * bNonConst = const_cast<float *>(b);
-            int size = max(ts.result[i].second.size(), ts.result[j].second.size());
+            int size = min(ts.result[i].second.size(), ts.result[j].second.size());
             //get absolute value from pearson
             float p = abs(pearson(aNonConst, bNonConst, size));
             if(p > m){
@@ -95,7 +95,7 @@ vector<AnomalyReport> SimpleAnomalyDetector::detect(const TimeSeries& ts){
     }
     return reportVec;
 }
-//jfuf
+
 float SimpleAnomalyDetector::getValue(const TimeSeries& ts, string feature, int index){
     for(int i = 0; i < ts.result.size(); ++i){
         if(ts.result.at(i).first == feature){
