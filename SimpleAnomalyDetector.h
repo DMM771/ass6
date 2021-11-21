@@ -9,6 +9,7 @@
 #include <algorithm>
 #include <string.h>
 #include <math.h>
+using namespace std;
 
 struct correlatedFeatures{
     string feature1,feature2;  // names of the correlated features
@@ -32,6 +33,9 @@ public:
         return cf;
     }
 
+    float getValue(const TimeSeries &ts, string feature, int index);
+
+    int getLinesNum(const TimeSeries &ts);
 };
 
 

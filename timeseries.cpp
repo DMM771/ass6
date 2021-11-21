@@ -28,7 +28,6 @@ TimeSeries::TimeSeries(const char* CSVfileName){
             result.at(column).second.push_back(val);
             //ignore ','
             if(ss.peek() == ',') ss.ignore();
-
             column++;
         }
     }

@@ -6,39 +6,25 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/dmmon/Desktop/Computer Science/year 2/Semester 1/Advanced programing 1/AS/AnomalyDetector.h
+C:/Users/Nitzan/Desktop/DN/AnomalyDetector.h
 string
 -
 vector
 -
 timeseries.h
-C:/Users/dmmon/Desktop/Computer Science/year 2/Semester 1/Advanced programing 1/AS/timeseries.h
+C:/Users/Nitzan/Desktop/DN/timeseries.h
 math.h
-C:/Users/dmmon/Desktop/Computer Science/year 2/Semester 1/Advanced programing 1/AS/math.h
+C:/Users/Nitzan/Desktop/DN/math.h
 
-C:/Users/dmmon/Desktop/Computer Science/year 2/Semester 1/Advanced programing 1/AS/MainTrain.cpp
-iostream
--
-vector
--
-AnomalyDetector.h
-C:/Users/dmmon/Desktop/Computer Science/year 2/Semester 1/Advanced programing 1/AS/AnomalyDetector.h
+C:/Users/Nitzan/Desktop/DN/SimpleAnomalyDetector.cpp
 SimpleAnomalyDetector.h
-C:/Users/dmmon/Desktop/Computer Science/year 2/Semester 1/Advanced programing 1/AS/SimpleAnomalyDetector.h
-fstream
--
-stdlib.h
--
-time.h
--
-math.h
--
+C:/Users/Nitzan/Desktop/DN/SimpleAnomalyDetector.h
 
-C:/Users/dmmon/Desktop/Computer Science/year 2/Semester 1/Advanced programing 1/AS/SimpleAnomalyDetector.h
+C:/Users/Nitzan/Desktop/DN/SimpleAnomalyDetector.h
 anomaly_detection_util.h
-C:/Users/dmmon/Desktop/Computer Science/year 2/Semester 1/Advanced programing 1/AS/anomaly_detection_util.h
+C:/Users/Nitzan/Desktop/DN/anomaly_detection_util.h
 AnomalyDetector.h
-C:/Users/dmmon/Desktop/Computer Science/year 2/Semester 1/Advanced programing 1/AS/AnomalyDetector.h
+C:/Users/Nitzan/Desktop/DN/AnomalyDetector.h
 vector
 -
 algorithm
@@ -48,11 +34,11 @@ string.h
 math.h
 -
 
-C:/Users/dmmon/Desktop/Computer Science/year 2/Semester 1/Advanced programing 1/AS/anomaly_detection_util.h
+C:/Users/Nitzan/Desktop/DN/anomaly_detection_util.h
 
-C:/Users/dmmon/Desktop/Computer Science/year 2/Semester 1/Advanced programing 1/AS/timeseries.h
+C:/Users/Nitzan/Desktop/DN/timeseries.h
 iostream
-C:/Users/dmmon/Desktop/Computer Science/year 2/Semester 1/Advanced programing 1/AS/iostream
+C:/Users/Nitzan/Desktop/DN/iostream
 fstream
 -
 vector

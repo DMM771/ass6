@@ -12,11 +12,6 @@ class TimeSeries{
 public:
     vector<pair<string,vector<float>>> result;
 public:
-
     TimeSeries(const char* CSVfileName);
-
 };
-
-
-
 #endif /* TIMESERIES_H_ */
