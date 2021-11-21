@@ -101,7 +101,7 @@ void SimpleAnomalyDetector::learnNormal(const TimeSeries& ts){
 * The function checks for every line in the time series if there are anomalies according to the
  * correlated features that found in the previous step. the function check for every couple data (according to
  * the couple that are in the correlated features vector) if the point that they are making is too far
- * from the linear reg of the correlated feature they belong to.
+ * from the linear reg of the correlated feature they belong to..
 ******/
 
 
