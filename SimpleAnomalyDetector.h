@@ -9,6 +9,7 @@
 #include <algorithm>
 #include <string.h>
 #include <math.h>
+#include <map>
 using namespace std;
 
 struct correlatedFeatures{

@@ -5,7 +5,6 @@
 * ex1
 * ************/
 
-
 #include "anomaly_detection_util.h"
 #include <cmath>
 
@@ -98,7 +97,7 @@ float pearson(float* x, float* y, int size){
 Line linear_reg(Point** points, int size){
     float x[size];
     float y[size];
-    for (int i = 0; i < 0; i++) {
+    for (int i = 0; i < size; i++) {
         x[i] = (*points)[i].x;
         y[i] = (*points)[i].y;
     }
@@ -111,8 +110,7 @@ Line linear_reg(Point** points, int size){
     //b = y - ax
     float b = avgY - (a * avgX);
 
-
-    return {a, b};
+    return {a,b};
 }
 
 /******

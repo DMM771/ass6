@@ -6,11 +6,14 @@
 #include <fstream>
 #include <vector>
 #include <sstream>
+#include <map>
+
 using namespace std;
 
 class TimeSeries{
 public:
     vector<pair<string,vector<float>>> result;
+    map<string,vector<float>> mp;
 public:
     TimeSeries(const char* CSVfileName);
 };

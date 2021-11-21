@@ -52,10 +52,10 @@ RM = "C:\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\Nitzan\Desktop\DN
+CMAKE_SOURCE_DIR = "C:\Users\dmmon\Desktop\Computer Science\year 2\Semester 1\Advanced programing 1\AS"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\Nitzan\Desktop\DN\cmake-build-debug
+CMAKE_BINARY_DIR = "C:\Users\dmmon\Desktop\Computer Science\year 2\Semester 1\Advanced programing 1\AS\cmake-build-debug"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/ass1.dir/depend.make
@@ -67,55 +67,55 @@ include CMakeFiles/ass1.dir/flags.make
 
 CMakeFiles/ass1.dir/MainTrain.cpp.obj: CMakeFiles/ass1.dir/flags.make
 CMakeFiles/ass1.dir/MainTrain.cpp.obj: ../MainTrain.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Nitzan\Desktop\DN\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ass1.dir/MainTrain.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\ass1.dir\MainTrain.cpp.obj -c C:\Users\Nitzan\Desktop\DN\MainTrain.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\dmmon\Desktop\Computer Science\year 2\Semester 1\Advanced programing 1\AS\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ass1.dir/MainTrain.cpp.obj"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\ass1.dir\MainTrain.cpp.obj -c "C:\Users\dmmon\Desktop\Computer Science\year 2\Semester 1\Advanced programing 1\AS\MainTrain.cpp"
 
 CMakeFiles/ass1.dir/MainTrain.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ass1.dir/MainTrain.cpp.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Nitzan\Desktop\DN\MainTrain.cpp > CMakeFiles\ass1.dir\MainTrain.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\dmmon\Desktop\Computer Science\year 2\Semester 1\Advanced programing 1\AS\MainTrain.cpp" > CMakeFiles\ass1.dir\MainTrain.cpp.i
 
 CMakeFiles/ass1.dir/MainTrain.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ass1.dir/MainTrain.cpp.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Nitzan\Desktop\DN\MainTrain.cpp -o CMakeFiles\ass1.dir\MainTrain.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\dmmon\Desktop\Computer Science\year 2\Semester 1\Advanced programing 1\AS\MainTrain.cpp" -o CMakeFiles\ass1.dir\MainTrain.cpp.s
 
 CMakeFiles/ass1.dir/anomaly_detection_util.cpp.obj: CMakeFiles/ass1.dir/flags.make
 CMakeFiles/ass1.dir/anomaly_detection_util.cpp.obj: ../anomaly_detection_util.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Nitzan\Desktop\DN\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ass1.dir/anomaly_detection_util.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\ass1.dir\anomaly_detection_util.cpp.obj -c C:\Users\Nitzan\Desktop\DN\anomaly_detection_util.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\dmmon\Desktop\Computer Science\year 2\Semester 1\Advanced programing 1\AS\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ass1.dir/anomaly_detection_util.cpp.obj"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\ass1.dir\anomaly_detection_util.cpp.obj -c "C:\Users\dmmon\Desktop\Computer Science\year 2\Semester 1\Advanced programing 1\AS\anomaly_detection_util.cpp"
 
 CMakeFiles/ass1.dir/anomaly_detection_util.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ass1.dir/anomaly_detection_util.cpp.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Nitzan\Desktop\DN\anomaly_detection_util.cpp > CMakeFiles\ass1.dir\anomaly_detection_util.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\dmmon\Desktop\Computer Science\year 2\Semester 1\Advanced programing 1\AS\anomaly_detection_util.cpp" > CMakeFiles\ass1.dir\anomaly_detection_util.cpp.i
 
 CMakeFiles/ass1.dir/anomaly_detection_util.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ass1.dir/anomaly_detection_util.cpp.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Nitzan\Desktop\DN\anomaly_detection_util.cpp -o CMakeFiles\ass1.dir\anomaly_detection_util.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\dmmon\Desktop\Computer Science\year 2\Semester 1\Advanced programing 1\AS\anomaly_detection_util.cpp" -o CMakeFiles\ass1.dir\anomaly_detection_util.cpp.s
 
 CMakeFiles/ass1.dir/SimpleAnomalyDetector.cpp.obj: CMakeFiles/ass1.dir/flags.make
 CMakeFiles/ass1.dir/SimpleAnomalyDetector.cpp.obj: ../SimpleAnomalyDetector.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Nitzan\Desktop\DN\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ass1.dir/SimpleAnomalyDetector.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\ass1.dir\SimpleAnomalyDetector.cpp.obj -c C:\Users\Nitzan\Desktop\DN\SimpleAnomalyDetector.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\dmmon\Desktop\Computer Science\year 2\Semester 1\Advanced programing 1\AS\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ass1.dir/SimpleAnomalyDetector.cpp.obj"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\ass1.dir\SimpleAnomalyDetector.cpp.obj -c "C:\Users\dmmon\Desktop\Computer Science\year 2\Semester 1\Advanced programing 1\AS\SimpleAnomalyDetector.cpp"
 
 CMakeFiles/ass1.dir/SimpleAnomalyDetector.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ass1.dir/SimpleAnomalyDetector.cpp.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Nitzan\Desktop\DN\SimpleAnomalyDetector.cpp > CMakeFiles\ass1.dir\SimpleAnomalyDetector.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\dmmon\Desktop\Computer Science\year 2\Semester 1\Advanced programing 1\AS\SimpleAnomalyDetector.cpp" > CMakeFiles\ass1.dir\SimpleAnomalyDetector.cpp.i
 
 CMakeFiles/ass1.dir/SimpleAnomalyDetector.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ass1.dir/SimpleAnomalyDetector.cpp.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Nitzan\Desktop\DN\SimpleAnomalyDetector.cpp -o CMakeFiles\ass1.dir\SimpleAnomalyDetector.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\dmmon\Desktop\Computer Science\year 2\Semester 1\Advanced programing 1\AS\SimpleAnomalyDetector.cpp" -o CMakeFiles\ass1.dir\SimpleAnomalyDetector.cpp.s
 
 CMakeFiles/ass1.dir/timeseries.cpp.obj: CMakeFiles/ass1.dir/flags.make
 CMakeFiles/ass1.dir/timeseries.cpp.obj: ../timeseries.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Nitzan\Desktop\DN\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ass1.dir/timeseries.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\ass1.dir\timeseries.cpp.obj -c C:\Users\Nitzan\Desktop\DN\timeseries.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\dmmon\Desktop\Computer Science\year 2\Semester 1\Advanced programing 1\AS\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ass1.dir/timeseries.cpp.obj"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\ass1.dir\timeseries.cpp.obj -c "C:\Users\dmmon\Desktop\Computer Science\year 2\Semester 1\Advanced programing 1\AS\timeseries.cpp"
 
 CMakeFiles/ass1.dir/timeseries.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ass1.dir/timeseries.cpp.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Nitzan\Desktop\DN\timeseries.cpp > CMakeFiles\ass1.dir\timeseries.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\dmmon\Desktop\Computer Science\year 2\Semester 1\Advanced programing 1\AS\timeseries.cpp" > CMakeFiles\ass1.dir\timeseries.cpp.i
 
 CMakeFiles/ass1.dir/timeseries.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ass1.dir/timeseries.cpp.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Nitzan\Desktop\DN\timeseries.cpp -o CMakeFiles\ass1.dir\timeseries.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\dmmon\Desktop\Computer Science\year 2\Semester 1\Advanced programing 1\AS\timeseries.cpp" -o CMakeFiles\ass1.dir\timeseries.cpp.s
 
 # Object files for target ass1
 ass1_OBJECTS = \
@@ -135,7 +135,7 @@ ass1.exe: CMakeFiles/ass1.dir/build.make
 ass1.exe: CMakeFiles/ass1.dir/linklibs.rsp
 ass1.exe: CMakeFiles/ass1.dir/objects1.rsp
 ass1.exe: CMakeFiles/ass1.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Nitzan\Desktop\DN\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable ass1.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\dmmon\Desktop\Computer Science\year 2\Semester 1\Advanced programing 1\AS\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable ass1.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\ass1.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -147,6 +147,6 @@ CMakeFiles/ass1.dir/clean:
 .PHONY : CMakeFiles/ass1.dir/clean
 
 CMakeFiles/ass1.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\Nitzan\Desktop\DN C:\Users\Nitzan\Desktop\DN C:\Users\Nitzan\Desktop\DN\cmake-build-debug C:\Users\Nitzan\Desktop\DN\cmake-build-debug C:\Users\Nitzan\Desktop\DN\cmake-build-debug\CMakeFiles\ass1.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\dmmon\Desktop\Computer Science\year 2\Semester 1\Advanced programing 1\AS" "C:\Users\dmmon\Desktop\Computer Science\year 2\Semester 1\Advanced programing 1\AS" "C:\Users\dmmon\Desktop\Computer Science\year 2\Semester 1\Advanced programing 1\AS\cmake-build-debug" "C:\Users\dmmon\Desktop\Computer Science\year 2\Semester 1\Advanced programing 1\AS\cmake-build-debug" "C:\Users\dmmon\Desktop\Computer Science\year 2\Semester 1\Advanced programing 1\AS\cmake-build-debug\CMakeFiles\ass1.dir\DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/ass1.dir/depend
 

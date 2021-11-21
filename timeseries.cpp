@@ -1,6 +1,8 @@
+#include <map>
 #include "timeseries.h"
 
 TimeSeries::TimeSeries(const char* CSVfileName){
+
     //open stream for file
     ifstream infoFile(CSVfileName);
     //set row, colName and val for use in iteration
@@ -24,21 +26,21 @@ TimeSeries::TimeSeries(const char* CSVfileName){
         int column = 0;
         //loop to store each value in val
         while (ss >> val){
+
             //finally, add to second pair of vector
             result.at(column).second.push_back(val);
+
             //ignore ','
             if(ss.peek() == ',') ss.ignore();
+
             column++;
         }
     }
-
     for (int i = 0; i < result.size(); i++) {
-        cout << "column name is: " << result[i].first;
-        cout << endl;
-        for (int j = 0; j < result[i].second.size(); j++) {
-            cout << result[i].second[j] << " ";
+        string s = result[i].first;
+        vector<float> v = result[i].second;
+            mp.insert(pair<string, vector<float>>(s, v));
         }
-        cout << endl << endl << endl;
-    }
+
     infoFile.close();
 }
