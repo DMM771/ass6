@@ -1,6 +1,19 @@
+//324680438
+//313306367
+/*************
+* Nitzan Fisher & David Monheit
+* ex2
+* ************/
 #include <map>
 #include "timeseries.h"
-
+/******
+* Function Name: TimeSreies constructor
+* Input: const char* CSVfileName - a CSV file.
+* Output: void.
+* The function gets a csv file and builds from it the vector of pairs that the time series holds ("result").
+ * the pairs contains the columns of the table so the string is the collumn name and the vector holds the
+ * values in the column.
+******/
 TimeSeries::TimeSeries(const char* CSVfileName){
 
     //open stream for file
