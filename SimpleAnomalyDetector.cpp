@@ -95,7 +95,7 @@ vector<AnomalyReport> SimpleAnomalyDetector::detect(const TimeSeries& ts){
     }
     return reportVec;
 }
-
+//jfuf
 float SimpleAnomalyDetector::getValue(const TimeSeries& ts, string feature, int index){
     for(int i = 0; i < ts.result.size(); ++i){
         if(ts.result.at(i).first == feature){
