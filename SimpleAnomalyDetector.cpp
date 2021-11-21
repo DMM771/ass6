@@ -70,7 +70,7 @@ void SimpleAnomalyDetector::learnNormal(const TimeSeries& ts){
             Point *p = listOfPoints.data();
             points = &p;
             cor.lin_reg = linear_reg(points, size);
-            cor.correlation = m;
+            cor.corrlation = m;
             float maxDev = 0;
             for(int l = 0; l < size; l++){
                 float temDev = dev(listOfPoints[l], cor.lin_reg);
