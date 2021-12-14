@@ -100,6 +100,12 @@
 		<Unit filename="C:/Users/dmmon/Desktop/Computer Science/year 2/Semester 1/Advanced programing 1/AS/anomaly_detection_util.h">
 			<Option target="ass1"/>
 		</Unit>
+		<Unit filename="C:/Users/dmmon/Desktop/Computer Science/year 2/Semester 1/Advanced programing 1/AS/minCircle.cpp">
+			<Option target="ass1"/>
+		</Unit>
+		<Unit filename="C:/Users/dmmon/Desktop/Computer Science/year 2/Semester 1/Advanced programing 1/AS/minCircle.h">
+			<Option target="ass1"/>
+		</Unit>
 		<Unit filename="C:/Users/dmmon/Desktop/Computer Science/year 2/Semester 1/Advanced programing 1/AS/timeseries.cpp">
 			<Option target="ass1"/>
 		</Unit>

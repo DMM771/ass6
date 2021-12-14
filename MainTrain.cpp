@@ -64,7 +64,6 @@ int main(){
     float a1=1+rand()%10, b1=-50+rand()%100;
     float a2=1+rand()%20 , b2=-50+rand()%100;
 
-
     // test the learned model: (40 points)
     // expected correlations:
     //	A-C: y=a1*x+b1
@@ -83,7 +82,6 @@ int main(){
             checkCorrelationTrain(c,"A","C",a1,b1); // 20 points
             checkCorrelationTrain(c,"B","D",a2,b2); // 20 points
         });
-
     // test the anomaly detector: (60 points)
     // one simply anomaly is injected to the data
     int anomaly=5+rand()%90; // one anomaly injected in a random time step

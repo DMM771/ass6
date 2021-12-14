@@ -1,6 +1,6 @@
 
 #include "SimpleAnomalyDetector.h"
-
+#include "minCircle.h"
 SimpleAnomalyDetector::SimpleAnomalyDetector() {
     // TODO Auto-generated constructor stub
 
@@ -70,6 +70,7 @@ void SimpleAnomalyDetector::learnNormal(const TimeSeries& ts){
             Point *p = listOfPoints.data();
             points = &p;
             cor.lin_reg = linear_reg(points, size);
+            findMinCircle(points, size);                   //////////////////
             cor.corrlation = m;
             float maxDev = 0;
             for(int l = 0; l < size; l++){

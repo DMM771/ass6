@@ -6,49 +6,43 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/dmmon/Desktop/Computer Science/year 2/Semester 1/Advanced programing 1/AS/AnomalyDetector.h
-string
--
-vector
--
-timeseries.h
-C:/Users/dmmon/Desktop/Computer Science/year 2/Semester 1/Advanced programing 1/AS/timeseries.h
-math.h
-C:/Users/dmmon/Desktop/Computer Science/year 2/Semester 1/Advanced programing 1/AS/math.h
-
-C:/Users/dmmon/Desktop/Computer Science/year 2/Semester 1/Advanced programing 1/AS/SimpleAnomalyDetector.cpp
-SimpleAnomalyDetector.h
-C:/Users/dmmon/Desktop/Computer Science/year 2/Semester 1/Advanced programing 1/AS/SimpleAnomalyDetector.h
-
-C:/Users/dmmon/Desktop/Computer Science/year 2/Semester 1/Advanced programing 1/AS/SimpleAnomalyDetector.h
-anomaly_detection_util.h
 C:/Users/dmmon/Desktop/Computer Science/year 2/Semester 1/Advanced programing 1/AS/anomaly_detection_util.h
-AnomalyDetector.h
-C:/Users/dmmon/Desktop/Computer Science/year 2/Semester 1/Advanced programing 1/AS/AnomalyDetector.h
+iostream
+-
+
+C:/Users/dmmon/Desktop/Computer Science/year 2/Semester 1/Advanced programing 1/AS/minCircle.cpp
+minCircle.h
+C:/Users/dmmon/Desktop/Computer Science/year 2/Semester 1/Advanced programing 1/AS/minCircle.h
+algorithm
+-
+assert.h
+-
+iostream
+-
+math.h
+-
 vector
 -
 algorithm
 -
-string.h
+assert.h
+-
+iostream
 -
 math.h
 -
-map
+vector
 -
 
-C:/Users/dmmon/Desktop/Computer Science/year 2/Semester 1/Advanced programing 1/AS/anomaly_detection_util.h
+C:/Users/dmmon/Desktop/Computer Science/year 2/Semester 1/Advanced programing 1/AS/minCircle.h
 iostream
--
-
-C:/Users/dmmon/Desktop/Computer Science/year 2/Semester 1/Advanced programing 1/AS/timeseries.h
-iostream
-C:/Users/dmmon/Desktop/Computer Science/year 2/Semester 1/Advanced programing 1/AS/iostream
-fstream
 -
 vector
 -
-sstream
+stdlib.h
 -
-map
+time.h
 -
+anomaly_detection_util.h
+C:/Users/dmmon/Desktop/Computer Science/year 2/Semester 1/Advanced programing 1/AS/anomaly_detection_util.h
 
