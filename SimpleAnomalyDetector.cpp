@@ -19,6 +19,15 @@ for (int i =0; i < size; i++){
     return listOfPoints;
 }
 
+/******
+* Function Name: learnNormal
+* Input: const TimeSeries& ts - time series.
+* Output: void.
+* The function gets a time series and then check every couple of columns if there is a correlation between
+ * them, if so it saves for every collumn the collumn that is most correlated to. the function fills
+ * the correlated features vector cf.
+******/
+
 void SimpleAnomalyDetector::learnNormal(const TimeSeries& ts){
 
     float minCorrelation = 0.5;
@@ -86,21 +95,12 @@ void SimpleAnomalyDetector::learnNormal(const TimeSeries& ts){
 
 }
 
-int SimpleAnomalyDetector::getLinesNum(const TimeSeries& ts){
-    int m = 0;
-    int temp = 0;
-    for(int i = 0; i < ts.result.size(); i++){
-        for(int j = 0; j < ts.result.at(i).second.size(); j++){
-            temp++;
-        }
-            if(temp > m){
-                m = temp;
-            }
-            temp = 0;
-    }
-    return m;
-
-}
+/******
+* Function Name: detect
+* Input: const TimeSeries& ts - time series.
+* Output: void.
+* The function detects anomalies using the makeReport method and returns a vector of reports.
+******/
 
 vector<AnomalyReport> SimpleAnomalyDetector::detect(const TimeSeries& ts){
     vector<AnomalyReport> reportVec;
@@ -110,7 +110,17 @@ vector<AnomalyReport> SimpleAnomalyDetector::detect(const TimeSeries& ts){
     return reportVec;
 }
 
-// create detect's report by line regresion algorithm
+/******
+* Function Name: makeReport
+* Input: map<string,vector<float>>(the map of the columns from the time series), vector<correlatedFeatures>,
+ * vector<AnomalyReport> (reports to fill), long timeStep).
+* Output: void.
+* The function checks for every line in the time series if there are anomalies according to the
+ * correlated features that found in the previous step. the function check for every couple data (according to
+ * the couple that are in the correlated features vector) if the point that they are making is too far
+ * from the linear reg of the correlated feature they belong to.
+ * from the linear reg of the correlated feature they belong to..
+******/
 void SimpleAnomalyDetector::makeReport( map<string,vector<float>> map, vector<correlatedFeatures> cf, vector<AnomalyReport> &vec, long timeStep)
 {
     string feature1, feature2;

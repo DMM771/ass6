@@ -144,15 +144,14 @@ Circle welzl_helper(vector<Point>& P,
     return welzl_helper(P, R, n - 1);
 }
 
+//implementing the weltz algorythm using the methods above.
 Circle welzl(vector<Point>& P)
 {
     vector<Point> P_copy = P;
     random_shuffle(P_copy.begin(), P_copy.end());
     return welzl_helper(P_copy, {}, P_copy.size());
 }
-
-
-
+//finding the minimum circle that can wrap specific group of points.
 Circle findMinCircle(Point** points,size_t size){
     vector<Point> v;
     v.reserve(size);

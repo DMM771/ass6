@@ -8,12 +8,12 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/dmmon/Desktop/Computer Science/year 2/Semester 1/Advanced programing 1/AS/HybridAnomalyDetector.cpp" "C:/Users/dmmon/Desktop/Computer Science/year 2/Semester 1/Advanced programing 1/AS/cmake-build-debug/CMakeFiles/ass1.dir/HybridAnomalyDetector.cpp.obj"
-  "C:/Users/dmmon/Desktop/Computer Science/year 2/Semester 1/Advanced programing 1/AS/MainTrain.cpp" "C:/Users/dmmon/Desktop/Computer Science/year 2/Semester 1/Advanced programing 1/AS/cmake-build-debug/CMakeFiles/ass1.dir/MainTrain.cpp.obj"
-  "C:/Users/dmmon/Desktop/Computer Science/year 2/Semester 1/Advanced programing 1/AS/SimpleAnomalyDetector.cpp" "C:/Users/dmmon/Desktop/Computer Science/year 2/Semester 1/Advanced programing 1/AS/cmake-build-debug/CMakeFiles/ass1.dir/SimpleAnomalyDetector.cpp.obj"
-  "C:/Users/dmmon/Desktop/Computer Science/year 2/Semester 1/Advanced programing 1/AS/anomaly_detection_util.cpp" "C:/Users/dmmon/Desktop/Computer Science/year 2/Semester 1/Advanced programing 1/AS/cmake-build-debug/CMakeFiles/ass1.dir/anomaly_detection_util.cpp.obj"
-  "C:/Users/dmmon/Desktop/Computer Science/year 2/Semester 1/Advanced programing 1/AS/minCircle.cpp" "C:/Users/dmmon/Desktop/Computer Science/year 2/Semester 1/Advanced programing 1/AS/cmake-build-debug/CMakeFiles/ass1.dir/minCircle.cpp.obj"
-  "C:/Users/dmmon/Desktop/Computer Science/year 2/Semester 1/Advanced programing 1/AS/timeseries.cpp" "C:/Users/dmmon/Desktop/Computer Science/year 2/Semester 1/Advanced programing 1/AS/cmake-build-debug/CMakeFiles/ass1.dir/timeseries.cpp.obj"
+  "C:/Users/Nitzan/Desktop/DN/HybridAnomalyDetector.cpp" "C:/Users/Nitzan/Desktop/DN/cmake-build-debug/CMakeFiles/ass1.dir/HybridAnomalyDetector.cpp.obj"
+  "C:/Users/Nitzan/Desktop/DN/MainTrain.cpp" "C:/Users/Nitzan/Desktop/DN/cmake-build-debug/CMakeFiles/ass1.dir/MainTrain.cpp.obj"
+  "C:/Users/Nitzan/Desktop/DN/SimpleAnomalyDetector.cpp" "C:/Users/Nitzan/Desktop/DN/cmake-build-debug/CMakeFiles/ass1.dir/SimpleAnomalyDetector.cpp.obj"
+  "C:/Users/Nitzan/Desktop/DN/anomaly_detection_util.cpp" "C:/Users/Nitzan/Desktop/DN/cmake-build-debug/CMakeFiles/ass1.dir/anomaly_detection_util.cpp.obj"
+  "C:/Users/Nitzan/Desktop/DN/minCircle.cpp" "C:/Users/Nitzan/Desktop/DN/cmake-build-debug/CMakeFiles/ass1.dir/minCircle.cpp.obj"
+  "C:/Users/Nitzan/Desktop/DN/timeseries.cpp" "C:/Users/Nitzan/Desktop/DN/cmake-build-debug/CMakeFiles/ass1.dir/timeseries.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

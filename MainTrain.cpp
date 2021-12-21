@@ -1,10 +1,10 @@
 /*
  * MainTrain.cpp
  *
- *  Created on: 11 пїЅпїЅпїЅпїЅпїЅ 2020
+ *  Created on: 11 баечЧ 2020
  *      Author: Eli
  */
-//nitzan
+
 #include <iostream>
 #include <vector>
 #include "HybridAnomalyDetector.h"
@@ -108,9 +108,7 @@ int main(){
 	generateTrainCSV(a1,b1,a2,b2,a3,b3);
 	TimeSeries ts("trainFile.csv");
 	HybridAnomalyDetector ad;
-
 	ad.learnNormal(ts);
-
 	vector<correlatedFeatures> cf=ad.getNormalModel();
 
 	if(cf.size()!=3)
