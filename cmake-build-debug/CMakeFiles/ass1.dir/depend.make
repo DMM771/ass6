@@ -3,6 +3,7 @@
 
 CMakeFiles/ass1.dir/MainTrain.cpp.obj: \
  ../AnomalyDetector.h \
+ ../HybridAnomalyDetector.h \
  ../MainTrain.cpp \
  ../SimpleAnomalyDetector.h \
  ../anomaly_detection_util.h \

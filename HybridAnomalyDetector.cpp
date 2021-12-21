@@ -6,6 +6,7 @@ HybridAnomalyDetector::HybridAnomalyDetector() {
 
 HybridAnomalyDetector::~HybridAnomalyDetector() {
 }
+
 float distance(Point a,Point b)
 {
     return sqrt(pow(a.x - b.x, 2)

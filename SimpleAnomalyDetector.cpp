@@ -2,7 +2,7 @@
 #include "SimpleAnomalyDetector.h"
 #include "minCircle.h"
 SimpleAnomalyDetector::SimpleAnomalyDetector() {
-    // TODO Auto-generated constructor stub
+    // TODO Auto-generated constructor stub bl
 
 }
 

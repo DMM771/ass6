@@ -16,15 +16,19 @@ C:/Users/Nitzan/Desktop/DN/timeseries.h
 math.h
 C:/Users/Nitzan/Desktop/DN/math.h
 
+C:/Users/Nitzan/Desktop/DN/HybridAnomalyDetector.h
+SimpleAnomalyDetector.h
+C:/Users/Nitzan/Desktop/DN/SimpleAnomalyDetector.h
+minCircle.h
+C:/Users/Nitzan/Desktop/DN/minCircle.h
+
 C:/Users/Nitzan/Desktop/DN/MainTrain.cpp
 iostream
 -
 vector
 -
-AnomalyDetector.h
-C:/Users/Nitzan/Desktop/DN/AnomalyDetector.h
-SimpleAnomalyDetector.h
-C:/Users/Nitzan/Desktop/DN/SimpleAnomalyDetector.h
+HybridAnomalyDetector.h
+C:/Users/Nitzan/Desktop/DN/HybridAnomalyDetector.h
 fstream
 -
 stdlib.h
