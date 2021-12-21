@@ -20,6 +20,7 @@ for (int i =0; i < size; i++){
 }
 
 void SimpleAnomalyDetector::learnNormal(const TimeSeries& ts){
+
     float minCorrelation = 0.5;
     float * aNonConst;
     float * bNonConst;
@@ -29,6 +30,7 @@ void SimpleAnomalyDetector::learnNormal(const TimeSeries& ts){
     string feature1,feature2;
     vector<Point> listOfPoints;
     Point **points;
+
     for(int i = 0; i < ts.result.size(); i++){
         feature1 = ts.result[i].first;
         float m = 0;
@@ -73,12 +75,15 @@ void SimpleAnomalyDetector::learnNormal(const TimeSeries& ts){
             }
             cor.threshold = (float) 1.1 * maxDev ;
             if(m < 0.9) {
+
                 cor.threshold = 1.1 * findMinCircle(points, size).radius;
                 cor.minCircle = findMinCircle(points, size);
+
             }
             cf.push_back(cor);
         }
     }
+
 }
 
 int SimpleAnomalyDetector::getLinesNum(const TimeSeries& ts){

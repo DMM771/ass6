@@ -1,6 +1,5 @@
 
 #include "HybridAnomalyDetector.h"
-#include "minCircle.h"
 HybridAnomalyDetector::HybridAnomalyDetector() {
 }
 
@@ -13,7 +12,8 @@ float distance(Point a,Point b)
                 + pow(a.y - b.y, 2));
 }
 
-void makeReport(map<string, vector<float>> map, vector<correlatedFeatures> cf, vector<AnomalyReport> &vec,
+
+void HybridAnomalyDetector::makeReport(map<string, vector<float>> map, vector<correlatedFeatures> cf, vector<AnomalyReport> &vec,
                 long timeStep){
     for (correlatedFeatures c:cf) {
         string feature1 = c.feature1;

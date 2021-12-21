@@ -8,8 +8,8 @@
 #include "minCircle.h"
 #include <vector>
 #include <algorithm>
-#include <string.h>
-#include <math.h>
+#include <cstring>
+#include <cmath>
 #include <map>
 using namespace std;
 
@@ -38,8 +38,9 @@ public:
 
     int getLinesNum(const TimeSeries &ts);
 
-    void makeReport(map<string, vector<float>> map, vector<correlatedFeatures> cf, vector<AnomalyReport> &vec,
+    virtual void makeReport(map<string, vector<float>> map, vector<correlatedFeatures> cf, vector<AnomalyReport> &vec,
                long timeStep);
+
 };
 
 

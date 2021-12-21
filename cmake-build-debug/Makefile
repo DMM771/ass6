@@ -56,10 +56,10 @@ RM = "C:\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\Nitzan\Desktop\DN
+CMAKE_SOURCE_DIR = "C:\Users\dmmon\Desktop\Computer Science\year 2\Semester 1\Advanced programing 1\AS"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\Nitzan\Desktop\DN\cmake-build-debug
+CMAKE_BINARY_DIR = "C:\Users\dmmon\Desktop\Computer Science\year 2\Semester 1\Advanced programing 1\AS\cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -86,9 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Nitzan\Desktop\DN\cmake-build-debug\CMakeFiles C:\Users\Nitzan\Desktop\DN\cmake-build-debug\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\dmmon\Desktop\Computer Science\year 2\Semester 1\Advanced programing 1\AS\cmake-build-debug\CMakeFiles" "C:\Users\dmmon\Desktop\Computer Science\year 2\Semester 1\Advanced programing 1\AS\cmake-build-debug\\CMakeFiles\progress.marks"
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Nitzan\Desktop\DN\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\dmmon\Desktop\Computer Science\year 2\Semester 1\Advanced programing 1\AS\cmake-build-debug\CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -127,6 +127,30 @@ ass1: cmake_check_build_system
 ass1/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\ass1.dir\build.make CMakeFiles/ass1.dir/build
 .PHONY : ass1/fast
+
+HybridAnomalyDetector.obj: HybridAnomalyDetector.cpp.obj
+.PHONY : HybridAnomalyDetector.obj
+
+# target to build an object file
+HybridAnomalyDetector.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ass1.dir\build.make CMakeFiles/ass1.dir/HybridAnomalyDetector.cpp.obj
+.PHONY : HybridAnomalyDetector.cpp.obj
+
+HybridAnomalyDetector.i: HybridAnomalyDetector.cpp.i
+.PHONY : HybridAnomalyDetector.i
+
+# target to preprocess a source file
+HybridAnomalyDetector.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ass1.dir\build.make CMakeFiles/ass1.dir/HybridAnomalyDetector.cpp.i
+.PHONY : HybridAnomalyDetector.cpp.i
+
+HybridAnomalyDetector.s: HybridAnomalyDetector.cpp.s
+.PHONY : HybridAnomalyDetector.s
+
+# target to generate assembly for a file
+HybridAnomalyDetector.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\ass1.dir\build.make CMakeFiles/ass1.dir/HybridAnomalyDetector.cpp.s
+.PHONY : HybridAnomalyDetector.cpp.s
 
 MainTrain.obj: MainTrain.cpp.obj
 .PHONY : MainTrain.obj
@@ -257,6 +281,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... ass1
+	@echo ... HybridAnomalyDetector.obj
+	@echo ... HybridAnomalyDetector.i
+	@echo ... HybridAnomalyDetector.s
 	@echo ... MainTrain.obj
 	@echo ... MainTrain.i
 	@echo ... MainTrain.s

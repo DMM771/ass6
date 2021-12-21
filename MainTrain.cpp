@@ -108,7 +108,9 @@ int main(){
 	generateTrainCSV(a1,b1,a2,b2,a3,b3);
 	TimeSeries ts("trainFile.csv");
 	HybridAnomalyDetector ad;
+
 	ad.learnNormal(ts);
+
 	vector<correlatedFeatures> cf=ad.getNormalModel();
 
 	if(cf.size()!=3)

@@ -1,17 +1,9 @@
 #include "minCircle.h"
 #include <algorithm>
-#include <assert.h>
-#include <iostream>
-#include <math.h>
+#include <cassert>
+#include <cmath>
 #include <vector>
 
-// C++ program to find the minimum enclosing
-// circle for N integer points in a 2-D plane
-#include <algorithm>
-#include <assert.h>
-#include <iostream>
-#include <math.h>
-#include <vector>
 using namespace std;
 
 // Defining infinity
@@ -164,8 +156,9 @@ Circle welzl(vector<Point>& P)
 Circle findMinCircle(Point** points,size_t size){
     vector<Point> v;
     v.reserve(size);
-for (int i = 0; i < size ; i++){
-        v.push_back(*points[i]);
+    for (int i = 0; i < size; i++){
+
+        v.push_back((*points)[i]);
     }
     Circle min = welzl(v);
     return min;
