@@ -20,7 +20,7 @@ for (int i =0; i < size; i++){
 }
 
 void SimpleAnomalyDetector::learnNormal(const TimeSeries& ts){
-    float minCorrelation = 0.9;
+    float minCorrelation = 0.5;
     float * aNonConst;
     float * bNonConst;
     float *finalConsA;
@@ -55,14 +55,6 @@ void SimpleAnomalyDetector::learnNormal(const TimeSeries& ts){
 
             correlatedFeatures cor = correlatedFeatures();
             listOfPoints = getPoints(finalConsA, finalConsB, size);
-/*
-            for(int i = 0; i < size; i++){
-                cout << "x value is" <<listOfPoints[i].x << "y value is" << listOfPoints[i].y;
-                cout << endl;
-            }
-*/
-
-
             //create new correlation and update fields
             //cor = new correlatedFeatures;
             cor.feature1 = feature1;
@@ -70,7 +62,6 @@ void SimpleAnomalyDetector::learnNormal(const TimeSeries& ts){
             Point *p = listOfPoints.data();
             points = &p;
             cor.lin_reg = linear_reg(points, size);
-            findMinCircle(points, size);                   //////////////////
             cor.corrlation = m;
             float maxDev = 0;
             for(int l = 0; l < size; l++){
@@ -81,6 +72,10 @@ void SimpleAnomalyDetector::learnNormal(const TimeSeries& ts){
                 }
             }
             cor.threshold = (float) 1.1 * maxDev ;
+            if(m < 0.9) {
+                cor.threshold = 1.1 * findMinCircle(points, size).radius;
+                cor.minCircle = findMinCircle(points, size);
+            }
             cf.push_back(cor);
         }
     }
@@ -104,32 +99,25 @@ int SimpleAnomalyDetector::getLinesNum(const TimeSeries& ts){
 
 vector<AnomalyReport> SimpleAnomalyDetector::detect(const TimeSeries& ts){
     vector<AnomalyReport> reportVec;
-    string feature1, feature2;
-    for(int i = 0; i < ts.result[0].second.size(); ++i){
-        for (correlatedFeatures c:cf){
-            feature1 = c.feature1;
-            feature2 = c.feature2;
-            Point p = Point(ts.mp.at(feature1).at(i),ts.mp.at(feature2).at(i));
-
-            if(dev(p, c.lin_reg) > c.threshold){
-                const string description = c.feature1 + "-" + c.feature2;
-
-                long timeStep = i + 1;
-                AnomalyReport ar(description, timeStep);
-                reportVec.push_back(ar);
-            }
-        }
+    for(int i = 0; i < ts.result[0].second.size(); ++i){\
+    makeReport(ts.mp, cf, reportVec, (long)i);
     }
     return reportVec;
 }
 
-float SimpleAnomalyDetector::getValue(const TimeSeries& ts, string feature, int index){
-    float ans = 0;
-    for(int i = 0; i < ts.result.size(); ++i){
-        if(ts.result.at(i).first == feature){
-            ans = ts.result.at(i).second.at(index);
+// create detect's report by line regresion algorithm
+void SimpleAnomalyDetector::makeReport( map<string,vector<float>> map, vector<correlatedFeatures> cf, vector<AnomalyReport> &vec, long timeStep)
+{
+    string feature1, feature2;
+
+    for (correlatedFeatures c:cf){
+        feature1 = c.feature1;
+        feature2 = c.feature2;
+        Point p = Point(map.at(feature1).at(timeStep),map.at(feature2).at(timeStep));
+        if(dev(p, c.lin_reg) > c.threshold){
+            const string description = feature1 + "-" + feature2;
+            AnomalyReport ar(description, timeStep + 1);
+            vec.push_back(ar);
         }
     }
-    return ans;
 }
-

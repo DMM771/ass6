@@ -6,35 +6,63 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/dmmon/Desktop/Computer Science/year 2/Semester 1/Advanced programing 1/AS/anomaly_detection_util.h
+C:/Users/Nitzan/Desktop/DN/AnomalyDetector.h
+string
+-
+vector
+-
+timeseries.h
+C:/Users/Nitzan/Desktop/DN/timeseries.h
+math.h
+C:/Users/Nitzan/Desktop/DN/math.h
+
+C:/Users/Nitzan/Desktop/DN/MainTrain.cpp
 iostream
 -
+vector
+-
+AnomalyDetector.h
+C:/Users/Nitzan/Desktop/DN/AnomalyDetector.h
+SimpleAnomalyDetector.h
+C:/Users/Nitzan/Desktop/DN/SimpleAnomalyDetector.h
+fstream
+-
+stdlib.h
+-
+time.h
+-
+math.h
+-
 
-C:/Users/dmmon/Desktop/Computer Science/year 2/Semester 1/Advanced programing 1/AS/minCircle.cpp
+C:/Users/Nitzan/Desktop/DN/SimpleAnomalyDetector.cpp
+SimpleAnomalyDetector.h
+C:/Users/Nitzan/Desktop/DN/SimpleAnomalyDetector.h
 minCircle.h
-C:/Users/dmmon/Desktop/Computer Science/year 2/Semester 1/Advanced programing 1/AS/minCircle.h
-algorithm
--
-assert.h
--
-iostream
--
-math.h
--
+C:/Users/Nitzan/Desktop/DN/minCircle.h
+
+C:/Users/Nitzan/Desktop/DN/SimpleAnomalyDetector.h
+anomaly_detection_util.h
+C:/Users/Nitzan/Desktop/DN/anomaly_detection_util.h
+AnomalyDetector.h
+C:/Users/Nitzan/Desktop/DN/AnomalyDetector.h
+minCircle.h
+C:/Users/Nitzan/Desktop/DN/minCircle.h
 vector
 -
 algorithm
 -
-assert.h
--
-iostream
+string.h
 -
 math.h
 -
-vector
+map
 -
 
-C:/Users/dmmon/Desktop/Computer Science/year 2/Semester 1/Advanced programing 1/AS/minCircle.h
+C:/Users/Nitzan/Desktop/DN/anomaly_detection_util.h
+iostream
+-
+
+C:/Users/Nitzan/Desktop/DN/minCircle.h
 iostream
 -
 vector
@@ -44,5 +72,17 @@ stdlib.h
 time.h
 -
 anomaly_detection_util.h
-C:/Users/dmmon/Desktop/Computer Science/year 2/Semester 1/Advanced programing 1/AS/anomaly_detection_util.h
+C:/Users/Nitzan/Desktop/DN/anomaly_detection_util.h
+
+C:/Users/Nitzan/Desktop/DN/timeseries.h
+iostream
+C:/Users/Nitzan/Desktop/DN/iostream
+fstream
+-
+vector
+-
+sstream
+-
+map
+-
 

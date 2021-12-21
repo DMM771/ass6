@@ -6,6 +6,7 @@ CMakeFiles/ass1.dir/MainTrain.cpp.obj: \
  ../MainTrain.cpp \
  ../SimpleAnomalyDetector.h \
  ../anomaly_detection_util.h \
+ ../minCircle.h \
  ../timeseries.h
 CMakeFiles/ass1.dir/SimpleAnomalyDetector.cpp.obj: \
  ../AnomalyDetector.h \
