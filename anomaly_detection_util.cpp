@@ -2,12 +2,10 @@
 //313306367
 /*************
 * Nitzan Fisher & David Monheit
-* ex1
+* ex2
 * ************/
-
 #include "anomaly_detection_util.h"
 #include <cmath>
-
 /******
 * Function Name: simpleAvg
 * Input: float* X - array of floats, float size - the array size.
