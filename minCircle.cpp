@@ -156,7 +156,7 @@ Circle findMinCircle(Point** points,size_t size){
     vector<Point> v;
     v.reserve(size);
     for (int i = 0; i < size; i++){
-        v.push_back((*points)[i]);
+        v.push_back(*points[i]);
     }
     Circle min = welzl(v);
     return min;
