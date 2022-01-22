@@ -11,12 +11,13 @@ SimpleAnomalyDetector::~SimpleAnomalyDetector() {
 }
 
 vector<Point> getPoints(float *a, float *b, int size){
-    vector<Point> listOfPoints;
-    listOfPoints.reserve(size);
+    //vector<Point> points = *listPoints;
+    vector<Point> listPoints;
+    (listPoints).reserve(size);
 for (int i =0; i < size; i++){
-        listOfPoints.emplace_back(a[i], b[i]);
+        listPoints.emplace_back(a[i], b[i]);
     }
-    return listOfPoints;
+    return listPoints;
 }
 
 /******
@@ -38,7 +39,7 @@ void SimpleAnomalyDetector::learnNormal(const TimeSeries& ts){
     int size;
     string feature1,feature2;
     vector<Point> listOfPoints;
-    Point **points;
+
 
     for(int i = 0; i < ts.result.size(); i++){
         feature1 = ts.result[i].first;
@@ -66,13 +67,20 @@ void SimpleAnomalyDetector::learnNormal(const TimeSeries& ts){
 
             correlatedFeatures cor = correlatedFeatures();
             listOfPoints = getPoints(finalConsA, finalConsB, size);
+
             //create new correlation and update fields
             //cor = new correlatedFeatures;
             cor.feature1 = feature1;
             cor.feature2 = feature2;
-            Point *p = listOfPoints.data();
-            points = &p;
-            cor.lin_reg = linear_reg(points, size);
+
+
+
+            Point **p = new Point *[size];
+            for(int i=0; i < size; i++){
+                p[i] = new Point(listOfPoints.at(i).x, listOfPoints.at(i).y);
+            }
+
+            cor.lin_reg = linear_reg(p, size);
             cor.corrlation = m;
             float maxDev = 0;
             for(int l = 0; l < size; l++){
@@ -84,9 +92,8 @@ void SimpleAnomalyDetector::learnNormal(const TimeSeries& ts){
             }
             cor.threshold = (float) 1.1 * maxDev ;
             if(m < 0.9) {
-
-                cor.threshold = 1.1 * findMinCircle(points, size).radius;
-                cor.minCircle = findMinCircle(points, size);
+               cor.threshold = 1.1 * findMinCircle(p, size).radius;
+               cor.minCircle = findMinCircle(p, size);
 
             }
             cf.push_back(cor);

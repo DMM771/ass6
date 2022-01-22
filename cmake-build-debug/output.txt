@@ -1,0 +1,19 @@
+Welcome to the Anomaly Detection Server.
+Please choose an option:
+1. Upload a time series CSV file
+2.algorithm settings
+3. Detect anomalies.
+4. Display results
+5.upload anomalies and analyze results
+6.exit
+Please upload your local train CSV file.
+Upload complete.
+Please upload your local test CSV file.
+Upload complete.
+Welcome to the Anomaly Detection Server.
+Please choose an option:
+1. Upload a time series CSV file
+2.algorithm settings
+3. Detect anomalies.
+4. Display results
+5.upload anomalies and analyze results

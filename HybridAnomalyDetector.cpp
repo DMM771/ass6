@@ -37,14 +37,14 @@ void HybridAnomalyDetector::makeReport(map<string, vector<float>> map, vector<co
         string feature1 = c.feature1;
         string feature2 = c.feature2;
         Point p = Point(map.at(feature1).at(timeStep),map.at(feature2).at(timeStep));
-        if(c.corrlation > 0.9){
+        if(c.corrlation > threashold){
             if(dev(p, c.lin_reg) > c.threshold){
                 const string description = feature1 + "-" + feature2;
                 AnomalyReport ar(description, timeStep + 1);
                 vec.push_back(ar);
                 }
             }
-        if(c.corrlation <= 0.9){
+        if(c.corrlation <= threashold){
                 if(distance(p, c.minCircle.center) > c.threshold){
                     const string description = feature1 + "-" + feature2;
                     AnomalyReport ar(description, timeStep + 1);
@@ -53,4 +53,9 @@ void HybridAnomalyDetector::makeReport(map<string, vector<float>> map, vector<co
         }
     }
 }
+void HybridAnomalyDetector::setThreashold(float t)
+{
+    threashold = t;
+}
+
 
