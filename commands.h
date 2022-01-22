@@ -160,7 +160,7 @@ class Upload : public Command
 {
 public:
     Upload(DefaultIO* dio,cliSet* cliSet) : Command(dio, cliSet){
-        Command::name = "1. Upload a time series CSV file\n";
+        Command::name = "1.upload a time series csv file\n";
     }
     string read(){
         string str1, str2;
@@ -216,17 +216,17 @@ class Detect : public Command{
 public:
     Detect(DefaultIO *dio, cliSet *cliSet) : Command(dio, cliSet)
     {
-        Command::name = "3. Detect anomalies.\n";
+        Command::name = "3.detect anomalies.\n";
     }
     void execute(){
         this->cli->detector->learnNormal(*this->cli->csvTrain);
-        dio->write("anomaly detection complete.\\n");
+        dio->write("Anomaly detection complete.\\n");
     }
 };
 class Display : public Command{
 public:
     Display(DefaultIO *dio,cliSet *cliSet) : Command(dio,cliSet){
-        Command::name = "4. Display results\n";
+        Command::name = "4.display results\n";
     }
     void execute(){
         vector<AnomalyReport> reports = this->cli->detector->detect(*this->cli->csvTest);

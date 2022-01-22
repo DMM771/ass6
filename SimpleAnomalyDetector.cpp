@@ -76,8 +76,8 @@ void SimpleAnomalyDetector::learnNormal(const TimeSeries& ts){
 
 
             Point **p = new Point *[size];
-            for(int i=0; i < size; i++){
-                p[i] = new Point(listOfPoints.at(i).x, listOfPoints.at(i).y);
+            for (int t = 0; t < size; ++t) {
+                p[t] = new Point(listOfPoints.at(t).x, listOfPoints.at(t).y);
             }
 
             cor.lin_reg = linear_reg(p, size);

@@ -96,9 +96,10 @@ Line linear_reg(Point** points, int size){
     float x[size];
     float y[size];
     for (int i = 0; i < size; i++) {
-        x[i] = (*points)[i].x;
-        y[i] = (*points)[i].y;
+        x[i] = (points[i])->x;
+        y[i] = (points[i])->y;
     }
+
     //calculates the variance, covariance and then the average.
     float covXY = cov(x, y, size);
     float varX = var(x, size);
