@@ -16,9 +16,19 @@ C:/Users/Nitzan/Desktop/DN/timeseries.h
 cmath
 -
 
-C:/Users/Nitzan/Desktop/DN/HybridAnomalyDetector.cpp
-HybridAnomalyDetector.h
-C:/Users/Nitzan/Desktop/DN/HybridAnomalyDetector.h
+C:/Users/Nitzan/Desktop/DN/CLI.cpp
+CLI.h
+C:/Users/Nitzan/Desktop/DN/CLI.h
+
+C:/Users/Nitzan/Desktop/DN/CLI.h
+string.h
+-
+commands.h
+C:/Users/Nitzan/Desktop/DN/commands.h
+array
+-
+minCircle.h
+C:/Users/Nitzan/Desktop/DN/minCircle.h
 
 C:/Users/Nitzan/Desktop/DN/HybridAnomalyDetector.h
 SimpleAnomalyDetector.h
@@ -26,11 +36,15 @@ C:/Users/Nitzan/Desktop/DN/SimpleAnomalyDetector.h
 minCircle.h
 C:/Users/Nitzan/Desktop/DN/minCircle.h
 
-C:/Users/Nitzan/Desktop/DN/SimpleAnomalyDetector.cpp
-SimpleAnomalyDetector.h
-C:/Users/Nitzan/Desktop/DN/SimpleAnomalyDetector.h
-minCircle.h
-C:/Users/Nitzan/Desktop/DN/minCircle.h
+C:/Users/Nitzan/Desktop/DN/MainTrain.cpp
+iostream
+-
+fstream
+-
+commands.h
+C:/Users/Nitzan/Desktop/DN/commands.h
+CLI.h
+C:/Users/Nitzan/Desktop/DN/CLI.h
 
 C:/Users/Nitzan/Desktop/DN/SimpleAnomalyDetector.h
 anomaly_detection_util.h
@@ -52,6 +66,26 @@ map
 
 C:/Users/Nitzan/Desktop/DN/anomaly_detection_util.h
 iostream
+-
+
+C:/Users/Nitzan/Desktop/DN/commands.h
+iostream
+-
+string.h
+-
+fstream
+-
+sstream
+-
+vector
+-
+HybridAnomalyDetector.h
+C:/Users/Nitzan/Desktop/DN/HybridAnomalyDetector.h
+stdlib.h
+-
+unistd.h
+-
+stdio.h
 -
 
 C:/Users/Nitzan/Desktop/DN/minCircle.h

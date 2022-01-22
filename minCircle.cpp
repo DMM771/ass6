@@ -155,7 +155,11 @@ Circle welzl(vector<Point>& P)
 Circle findMinCircle(Point** points,size_t size){
     vector<Point> v;
     v.reserve(size);
+    printf("                              %f   n",points[0]->y);
     for (int i = 0; i < size; i++){
+        printf("siz eequals %d\n", size);
+        printf("i equals %d\n", i);
+
         v.push_back(*points[i]);
     }
     Circle min = welzl(v);

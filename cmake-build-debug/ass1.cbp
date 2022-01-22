@@ -83,6 +83,12 @@
 		<Unit filename="C:/Users/Nitzan/Desktop/DN/AnomalyDetector.h">
 			<Option target="ass1"/>
 		</Unit>
+		<Unit filename="C:/Users/Nitzan/Desktop/DN/CLI.cpp">
+			<Option target="ass1"/>
+		</Unit>
+		<Unit filename="C:/Users/Nitzan/Desktop/DN/CLI.h">
+			<Option target="ass1"/>
+		</Unit>
 		<Unit filename="C:/Users/Nitzan/Desktop/DN/HybridAnomalyDetector.cpp">
 			<Option target="ass1"/>
 		</Unit>
@@ -102,6 +108,9 @@
 			<Option target="ass1"/>
 		</Unit>
 		<Unit filename="C:/Users/Nitzan/Desktop/DN/anomaly_detection_util.h">
+			<Option target="ass1"/>
+		</Unit>
+		<Unit filename="C:/Users/Nitzan/Desktop/DN/commands.h">
 			<Option target="ass1"/>
 		</Unit>
 		<Unit filename="C:/Users/Nitzan/Desktop/DN/minCircle.cpp">
