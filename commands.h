@@ -290,6 +290,7 @@ public:
                 trueP++;
             total += endIndex + 1 - startIndex;
             positiveCount++;
+            str = dio->read();
         }
         dio->write("Upload complete.\n");
         float FalsePos = 0;

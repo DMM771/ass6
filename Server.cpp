@@ -6,6 +6,8 @@
 #include <csignal>
 #include "Server.h"
 #include<unistd.h>
+#include <chrono>
+#include <thread>
 
 Server::Server(int port) throw(const char *) {
     fileDis = socket(AF_INET, SOCK_STREAM, 0);
@@ -26,8 +28,9 @@ Server::Server(int port) throw(const char *) {
 }
 
 void handler(int num) {
-    unsigned int microsec = 1000000;
-    usleep(3 * microsec);
+//    unsigned int microsec = 1000000;
+//    usleep(3 * microsec);
+    std::this_thread::sleep_for(std::chrono::milliseconds(3000));
 }
 
 void Server::start(ClientHandler &handlerOfClient) throw(const char *) {
