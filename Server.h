@@ -1,3 +1,7 @@
+//324680438
+//313306367
+// Nitzan Fisher & David Monheit
+
 #ifndef SERVER_H_
 #define SERVER_H_
 
@@ -18,12 +22,6 @@ struct sockAddress {
     char sin_zero[8];
 };
 
-//class SocketIO : public DefaultIO {
-//    int clientNum;
-//public:
-//    SocketIO(int clientNum) : clientNum(clientNum) {};
-//};
-
 // edit your ClientHandler interface here:
 class ClientHandler {
 public:
@@ -41,7 +39,7 @@ public:
 
     virtual string read();
     virtual void write(string str);
-    virtual void write(float f);
+    virtual void write(float floatValue);
     virtual void read(float* f);
 };
 // edit your AnomalyDetectionHandler class here
@@ -63,14 +61,13 @@ class Server {
     sockaddr_in client;
     int clientNum;
     volatile bool boolStop;
-    // you may add data members
 
 public:
     Server(int port) throw(const char *);
 
     virtual ~Server();
 
-    void start(ClientHandler &ch) throw(const char *);
+    void start(ClientHandler &handlerOfClient) throw(const char *);
 
     void stop();
 };

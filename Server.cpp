@@ -1,6 +1,11 @@
+//324680438
+//313306367
+// Nitzan Fisher & David Monheit
+
 #include <unistd.h>
 #include <csignal>
 #include "Server.h"
+#include<unistd.h>
 
 Server::Server(int port) throw(const char *) {
     fileDis = socket(AF_INET, SOCK_STREAM, 0);
@@ -20,19 +25,20 @@ Server::Server(int port) throw(const char *) {
         throw "can't listen";
 }
 
-void handler(int sigNum) {
-
+void handler(int num) {
+    unsigned int microsec = 1000000;
+    usleep(3 * microsec);
 }
 
-void Server::start(ClientHandler &ch) throw(const char *) {
-    t = new std::thread([&ch, this]() {
+void Server::start(ClientHandler &handlerOfClient) throw(const char *) {
+    t = new std::thread([&handlerOfClient, this]() {
         signal(SIGALRM,handler);
         while (!boolStop) {
             socklen_t clintSize = sizeof(client);
             alarm(1);
             int clientNum = accept(fileDis, (struct sockaddr *) &client, &clintSize);
             if (clientNum > 0) {
-                ch.handle(clientNum);
+                handlerOfClient.handle(clientNum);
                 close(clientNum);
             }
             alarm(0);
@@ -52,7 +58,7 @@ Server::~Server() {
 
 string SocketIo::read() {
     std::string data = "";
-    char input = 0;
+    char input = 'y';
     while(input != '\n') {
         recv(clientNum, &input, sizeof(char), 0);
         data += input;
@@ -64,9 +70,9 @@ void SocketIo::write(std::string text) {
     send(clientNum, text.c_str(), strlen(text.c_str()), 0);
 }
 
-void SocketIo::write(float f) {
+void SocketIo::write(float floatValue) {
     std::ostringstream floatStr;
-    floatStr << f;
+    floatStr << floatValue;
     string s(floatStr.str());
     write(s);
 }

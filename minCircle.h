@@ -1,3 +1,6 @@
+//324680438
+//313306367
+// Nitzan Fisher & David Monheit
 
 #ifndef MINCIRCLE_H_
 #define MINCIRCLE_H_

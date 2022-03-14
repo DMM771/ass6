@@ -1,3 +1,6 @@
+//324680438
+//313306367
+// Nitzan Fisher & David Monheit
 #ifndef ASS1_ANOMALY_DETECTION_UTIL_H
 #define ASS1_ANOMALY_DETECTION_UTIL_H
 #include <iostream>

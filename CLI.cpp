@@ -1,38 +1,43 @@
 #include "CLI.h"
+//324680438
+//313306367
+// Nitzan Fisher & David Monheit
 
-CLI::CLI(DefaultIO *dio1)
+CLI::CLI(DefaultIO *inputOutput)
 {
-    dio = dio1;
-    this->cli = new cliSet();
-    cliCmds.push_back(new Upload(dio));
-    cliCmds.push_back(new Settings(dio));
-    cliCmds.push_back(new Detect(dio));
-    cliCmds.push_back(new Display(dio));
-    cliCmds.push_back(new Analyze(dio));
-    cliCmds.push_back(new Exit(dio));
+    defaultInputOutput = inputOutput;
+    cliCmds.push_back(new UploadCmd(defaultInputOutput));
+    cliCmds.push_back(new Settings(defaultInputOutput));
+    cliCmds.push_back(new Detect(defaultInputOutput));
+    cliCmds.push_back(new Display(defaultInputOutput));
+    cliCmds.push_back(new Analyze(defaultInputOutput));
+    cliCmds.push_back(new ExitCmd(defaultInputOutput));
 }
 
 //activate the menu and execute every command
 void CLI::start()
 {
-    State s;
-    int in = -1;
-    while (in != 5)
+    int max = 5;
+    State state;
+    int currentOption = 12;
+    char option = 'c';
+    while (currentOption != max)
     {
-        dio->write("Welcome to the Anomaly Detection Server.\n");
-        dio->write("Please choose an option:\n");
+        defaultInputOutput->write("Welcome to the Anomaly Detection Server.\n");
+        defaultInputOutput->write("Please choose an option:\n");
         string numStr = "1.";
         for (int i = 0; i < cliCmds.size(); i++)
         {
             numStr = "1.";
-            numStr[0] = ((char)(i + 1) + '0');
-            dio->write(numStr);
-            dio->write(cliCmds[i]->desc + "\n");
+            option = i + 1;
+            numStr[0] = (option + '0');
+            defaultInputOutput->write(numStr);
+            defaultInputOutput->write(cliCmds[i]->desc + "\n");
         }
-        string input = dio->read();
-        in = input[0]-'0'-1;
-        if(in >= 0 && in <= 6)
-            cliCmds[in]->execute(&s);
+        string input = defaultInputOutput->read();
+        currentOption = input[0] - '0' - 1;
+        if(currentOption >= 0 && currentOption <= 6)
+            cliCmds[currentOption]->execute(&state);
     }
 }
 

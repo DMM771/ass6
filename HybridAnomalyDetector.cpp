@@ -1,3 +1,6 @@
+//324680438
+//313306367
+// Nitzan Fisher & David Monheit
 
 #include "HybridAnomalyDetector.h"
 HybridAnomalyDetector::HybridAnomalyDetector() {

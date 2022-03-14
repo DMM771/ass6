@@ -1,4 +1,6 @@
-
+//324680438
+//313306367
+// Nitzan Fisher & David Monheit
 
 #ifndef SIMPLEANOMALYDETECTOR_H_
 #define SIMPLEANOMALYDETECTOR_H_

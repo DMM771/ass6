@@ -1,4 +1,6 @@
-
+//324680438
+//313306367
+// Nitzan Fisher & David Monheit
 
 #ifndef ANOMALYDETECTOR_H_
 #define ANOMALYDETECTOR_H_

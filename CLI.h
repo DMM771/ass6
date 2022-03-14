@@ -1,4 +1,6 @@
-
+//324680438
+//313306367
+// Nitzan Fisher & David Monheit
 
 #ifndef CLI_H_
 #define CLI_H_
@@ -12,10 +14,9 @@ using namespace std;
 
 class CLI {
 public:
-	DefaultIO* dio;
+	DefaultIO* defaultInputOutput;
     vector<Command*> cliCmds;
-    cliSet* cli;
-	CLI(DefaultIO* dio);
+	CLI(DefaultIO* inputOutput);
 	void start();
 	virtual ~CLI();
 };
