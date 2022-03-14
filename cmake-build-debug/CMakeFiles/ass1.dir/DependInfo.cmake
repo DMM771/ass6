@@ -4,27 +4,18 @@ set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
 
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
-  "CXX"
-  )
-# The set of files for implicit dependencies of each language:
-set(CMAKE_DEPENDS_CHECK_CXX
-  "/mnt/c/Users/noamc/ass6/CLI.cpp" "/mnt/c/Users/noamc/ass6/cmake-build-debug/CMakeFiles/ass1.dir/CLI.cpp.o"
-  "/mnt/c/Users/noamc/ass6/HybridAnomalyDetector.cpp" "/mnt/c/Users/noamc/ass6/cmake-build-debug/CMakeFiles/ass1.dir/HybridAnomalyDetector.cpp.o"
-  "/mnt/c/Users/noamc/ass6/MainTrain.cpp" "/mnt/c/Users/noamc/ass6/cmake-build-debug/CMakeFiles/ass1.dir/MainTrain.cpp.o"
-  "/mnt/c/Users/noamc/ass6/Server.cpp" "/mnt/c/Users/noamc/ass6/cmake-build-debug/CMakeFiles/ass1.dir/Server.cpp.o"
-  "/mnt/c/Users/noamc/ass6/SimpleAnomalyDetector.cpp" "/mnt/c/Users/noamc/ass6/cmake-build-debug/CMakeFiles/ass1.dir/SimpleAnomalyDetector.cpp.o"
-  "/mnt/c/Users/noamc/ass6/anomaly_detection_util.cpp" "/mnt/c/Users/noamc/ass6/cmake-build-debug/CMakeFiles/ass1.dir/anomaly_detection_util.cpp.o"
-  "/mnt/c/Users/noamc/ass6/minCircle.cpp" "/mnt/c/Users/noamc/ass6/cmake-build-debug/CMakeFiles/ass1.dir/minCircle.cpp.o"
-  "/mnt/c/Users/noamc/ass6/timeseries.cpp" "/mnt/c/Users/noamc/ass6/cmake-build-debug/CMakeFiles/ass1.dir/timeseries.cpp.o"
-  )
-set(CMAKE_CXX_COMPILER_ID "GNU")
-
-# The include file search paths:
-set(CMAKE_CXX_TARGET_INCLUDE_PATH
   )
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/dmm/CLionProjects/ass6/CLI.cpp" "CMakeFiles/ass1.dir/CLI.cpp.o" "gcc" "CMakeFiles/ass1.dir/CLI.cpp.o.d"
+  "/home/dmm/CLionProjects/ass6/HybridAnomalyDetector.cpp" "CMakeFiles/ass1.dir/HybridAnomalyDetector.cpp.o" "gcc" "CMakeFiles/ass1.dir/HybridAnomalyDetector.cpp.o.d"
+  "/home/dmm/CLionProjects/ass6/MainTrain.cpp" "CMakeFiles/ass1.dir/MainTrain.cpp.o" "gcc" "CMakeFiles/ass1.dir/MainTrain.cpp.o.d"
+  "/home/dmm/CLionProjects/ass6/Server.cpp" "CMakeFiles/ass1.dir/Server.cpp.o" "gcc" "CMakeFiles/ass1.dir/Server.cpp.o.d"
+  "/home/dmm/CLionProjects/ass6/SimpleAnomalyDetector.cpp" "CMakeFiles/ass1.dir/SimpleAnomalyDetector.cpp.o" "gcc" "CMakeFiles/ass1.dir/SimpleAnomalyDetector.cpp.o.d"
+  "/home/dmm/CLionProjects/ass6/anomaly_detection_util.cpp" "CMakeFiles/ass1.dir/anomaly_detection_util.cpp.o" "gcc" "CMakeFiles/ass1.dir/anomaly_detection_util.cpp.o.d"
+  "/home/dmm/CLionProjects/ass6/minCircle.cpp" "CMakeFiles/ass1.dir/minCircle.cpp.o" "gcc" "CMakeFiles/ass1.dir/minCircle.cpp.o.d"
+  "/home/dmm/CLionProjects/ass6/timeseries.cpp" "CMakeFiles/ass1.dir/timeseries.cpp.o" "gcc" "CMakeFiles/ass1.dir/timeseries.cpp.o.d"
   )
 
 # Targets to which this target links.

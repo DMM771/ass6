@@ -38,9 +38,9 @@ public:
     SocketIo(int clientNum) : clientNum(clientNum) { }
 
     virtual string read();
-    virtual void write(string str);
+    virtual void write(string someString);
     virtual void write(float floatValue);
-    virtual void read(float* f);
+    virtual void read(float* x);
 };
 // edit your AnomalyDetectionHandler class here
 class AnomalyDetectionHandler : public ClientHandler {
@@ -55,7 +55,7 @@ public:
 
 // implement on Server.cpp
 class Server {
-    std::thread *t; // the thread to run the start() method in
+    std::thread *t; // the thread to run the initTime() method in
     int fileDis;
     sockaddr_in server;
     sockaddr_in client;

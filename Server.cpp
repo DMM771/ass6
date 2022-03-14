@@ -18,19 +18,16 @@ Server::Server(int port) throw(const char *) {
     server.sin_family = AF_INET;
     server.sin_addr.s_addr = INADDR_ANY;
     server.sin_port = htons(port);
-    //int checkBind = bind(fileDis, (struct sockaddr *) &server, sizeof server);
     if (bind(fileDis, (struct sockaddr *) &server, sizeof server) < 0) {
         throw "can't bind";
     }
-    int checkListen = listen(fileDis, 3);
+    int checkListen = listen(fileDis, 4);
     if (checkListen < 0)
         throw "can't listen";
 }
 
 void handler(int num) {
-//    unsigned int microsec = 1000000;
-//    usleep(3 * microsec);
-    std::this_thread::sleep_for(std::chrono::milliseconds(3000));
+    std::this_thread::sleep_for(std::chrono::milliseconds(3001));
 }
 
 void Server::start(ClientHandler &handlerOfClient) throw(const char *) {
@@ -69,8 +66,8 @@ string SocketIo::read() {
     return data;
 }
 
-void SocketIo::write(std::string text) {
-    send(clientNum, text.c_str(), strlen(text.c_str()), 0);
+void SocketIo::write(std::string someString) {
+    send(clientNum, someString.c_str(), strlen(someString.c_str()), 0);
 }
 
 void SocketIo::write(float floatValue) {
@@ -80,7 +77,7 @@ void SocketIo::write(float floatValue) {
     write(s);
 }
 
-void SocketIo::read(float *f) {
-    recv(clientNum, f, sizeof(float), 0);
+void SocketIo::read(float *x) {
+    recv(clientNum, x, sizeof(float), 0);
 }
 
