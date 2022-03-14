@@ -18,36 +18,11 @@ struct sockAddress {
     char sin_zero[8];
 };
 
-class SocketIO : public DefaultIO {
-    int clientNum;
-public:
-    SocketIO(int clientNum) : clientNum(clientNum) {};
-
-    virtual string read() {
-        std::string data = "";
-        char input;
-        do {
-            int n = recv(clientNum, &input, sizeof(char), 0);
-            data += input;
-        } while (input != '\n');
-        return data;
-    }
-
-    virtual void write(std::string text) {
-        send(clientNum, text.c_str(), strlen(text.c_str()), 0);
-    }
-
-    virtual void write(float f) {
-        std::ostringstream floatStr;
-        floatStr << f;
-        string s(floatStr.str());
-        write(s);
-    }
-
-    virtual void read(float *f) {
-        recv(clientNum, f, sizeof(float), 0);
-    }
-};
+//class SocketIO : public DefaultIO {
+//    int clientNum;
+//public:
+//    SocketIO(int clientNum) : clientNum(clientNum) {};
+//};
 
 // edit your ClientHandler interface here:
 class ClientHandler {
@@ -59,13 +34,22 @@ public:
 
 // you can add helper classes here and implement on the cpp file
 
+class SocketIo : public DefaultIO {
+    int clientNum;
+public:
+    SocketIo(int clientNum) : clientNum(clientNum) { }
 
+    virtual string read();
+    virtual void write(string str);
+    virtual void write(float f);
+    virtual void read(float* f);
+};
 // edit your AnomalyDetectionHandler class here
 class AnomalyDetectionHandler : public ClientHandler {
 public:
     virtual void handle(int clientID) {
-        SocketIO s(clientID);
-        CLI cli(&s);
+        SocketIo io(clientID);
+        CLI cli(&io);
         cli.start();
     }
 };
@@ -77,7 +61,8 @@ class Server {
     int fileDis;
     sockaddr_in server;
     sockaddr_in client;
-    bool isStop = false;
+    int clientNum;
+    volatile bool boolStop;
     // you may add data members
 
 public:
@@ -89,5 +74,4 @@ public:
 
     void stop();
 };
-
 #endif /* SERVER_H_ */

@@ -28,7 +28,7 @@ public:
         ofstream  out(name);
         string s = "";
         s = read();
-        while(s != "done\n" && s!="done" && (strcmp(s.c_str(), "done") == 0) && (strcmp(s.c_str(), "done\n") == 0)) {
+        while((s != "done\n") && (s!="done") && (strcmp(s.c_str(), "done") != 0) && (strcmp(s.c_str(), "done\n") != 0)) {
             out << s << endl;
             s = read();
         }
@@ -86,37 +86,37 @@ public:
     }
 };
 
-class socketIo : public DefaultIO{
-    int fd;
-public:
-    socketIo(int fd){
-        this->fd = fd;
-    }
-    virtual void write(string str){
-        ::write(fd, str.c_str(), str.length());
-    }
-    virtual void write(float num){
-        ::write(fd, &num, sizeof(num));
-    }
-    virtual string read(){
-        string input = "";
-        char c = 0;
-        while (c != '\n'){
-            input += c;
-            ::read(fd, &c, sizeof(c));
-        }
-        return input;
-    }
-    virtual  void read(float *num){
-        string input = "";
-        char c = 0;
-        while (c != '\n') {
-            input += c;
-            ::read(fd, &c, sizeof(c));
-        }
-        *num = stof(input);
-    }
-};
+//class socketIo : public DefaultIO{
+//    int fd;
+//public:
+//    socketIo(int fd){
+//        this->fd = fd;
+//    }
+//    virtual void write(string str){
+//        ::write(fd, str.c_str(), str.length());
+//    }
+//    virtual void write(float num){
+//        ::write(fd, &num, sizeof(num));
+//    }
+//    virtual string read(){
+//        string input = "";
+//        char c = 0;
+//        while (c != '\n'){
+//            input += c;
+//            ::read(fd, &c, sizeof(c));
+//        }
+//        return input;
+//    }
+//    virtual  void read(float *num){
+//        string input = "";
+//        char c = 0;
+//        while (c != '\n') {
+//            input += c;
+//            ::read(fd, &c, sizeof(c));
+//        }
+//        *num = stof(input);
+//    }
+//};
 class cliSet
 {
 public:
@@ -154,7 +154,7 @@ struct specialReport {
     int start;
     int end;
     string desc;
-    bool truePositive;
+    bool trueP;
 };
 
 struct State {
@@ -188,14 +188,14 @@ class Upload : public Command
 public:
     Upload(DefaultIO* dio) : Command(dio, "upload a time series csv file"){
     }
-    string read(){
-        string str1, str2;
-        while(str1 != "done\n" && str1!="done" && (strcmp(str1.c_str(), "done") == 0) && (strcmp(str1.c_str(), "done\n") == 0)){
-            str1 = dio->read();
-            str2 += str1 + "\n";
-        }
-        return str2;
-    }
+//    string read(){
+//        string str1, str2;
+//        while((str1 != "done\n") && (str1!="done") && (strcmp(str2.c_str(), "done") != 0) && (strcmp(str2.c_str(), "done\n") != 0)) {
+//            str1 = dio->read();
+//            str2 += str1 + "\n";
+//        }
+//        return str2;
+//    }
     virtual void execute(State* state){
         dio->write("Please upload your local train CSV file.\n");
         dio->readAndFile("anomalyTrain.csv");
@@ -247,7 +247,7 @@ public:
         fr.start=0;
         fr.end=0;
         fr.desc="";
-        fr.truePositive=false;
+        fr.trueP=false;
         for_each(state->reps.begin(),state->reps.end(),[&fr,state](AnomalyReport& ar){
             if(ar.timeStep==fr.end+1 && ar.description==fr.desc)
                 fr.end++;
@@ -286,7 +286,7 @@ public:
         for(size_t i=0;i<sharedState->specialReps.size();i++){
             specialReport rep=sharedState->specialReps[i];
             if(endTime >= rep.start && rep.end >= startTime){
-                sharedState->specialReps[i].truePositive=true;
+                sharedState->specialReps[i].trueP;
                 return true;
             }
         }
@@ -295,14 +295,14 @@ public:
 
     virtual void execute(State* state){
             for(int i=0;i<state->specialReps.size();i++){
-                state->specialReps[i].truePositive=false;
+                state->specialReps[i].trueP=false;
             }
 
             dio->write("Please upload your local anomalies file.\n");
             string str="";
-            float truePositive=0,total=0,positiveCount=0;
+            float trueP=0,total=0,positiveCount=0;
             str=dio->read();
-        while(str != "done\n" && str!="done" && (strcmp(str.c_str(), "done") == 0) && (strcmp(str.c_str(), "done\n") == 0)) {
+        while((str != "done\n") && (str!="done") && (strcmp(str.c_str(), "done") != 0) && (strcmp(str.c_str(), "done\n") != 0)) {
                 int counter=0;
                 for(int d = 0; str[counter] != ','; counter++);
                 string starter=str.substr(0, counter);
@@ -310,25 +310,26 @@ public:
                 int start = stoi(starter);
                 int end = stoi(ender);
                 if(isTruePositive(start,end,state))
-                    truePositive++;
+                    trueP++;
                 total+= end + 1 - start;
                 positiveCount++;
             }
             dio->write("Upload complete.\n");
             float FalsePos=0;
             for(size_t i=0;i<state->specialReps.size();i++)
-                if(!state->specialReps[i].truePositive)
+                if(!state->specialReps[i].trueP)
                     FalsePos++;
 
             float Number= state->fileSize - total;
-            float truePosR= ((int)(1000.0 * truePositive / positiveCount)) / 1000.0f;
+            float truePosR= ((int)(1000.0 * trueP / positiveCount)) / 1000.0f;
             float falsePosR= ((int)(1000.0 * FalsePos / Number)) / 1000.0f;
             dio->write("True Positive Rate: ");
             dio->write(truePosR);
             dio->write("\nFalse Positive Rate: ");
             dio->write(falsePosR);
             dio->write("\n");
-        }
+            str=dio->read();
+    }
     };
 
 class Exit : public Command{

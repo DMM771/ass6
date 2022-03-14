@@ -8,132 +8,132 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/dmm/Desktop/AS/cmake-build-debug"/>
+				<Option working_dir="/mnt/c/Users/noamc/ass6/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/gmake -j6 -f &quot;/home/dmm/Desktop/AS/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/gmake -j6 -f &quot;/home/dmm/Desktop/AS/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/gmake -j6 -f &quot;/home/dmm/Desktop/AS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/gmake -j6 -f &quot;/home/dmm/Desktop/AS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/noamc/ass6/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/noamc/ass6/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/noamc/ass6/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/noamc/ass6/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/dmm/Desktop/AS/cmake-build-debug"/>
+				<Option working_dir="/mnt/c/Users/noamc/ass6/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/gmake -j6 -f &quot;/home/dmm/Desktop/AS/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/gmake -j6 -f &quot;/home/dmm/Desktop/AS/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/gmake -j6 -f &quot;/home/dmm/Desktop/AS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/gmake -j6 -f &quot;/home/dmm/Desktop/AS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/noamc/ass6/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/noamc/ass6/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/noamc/ass6/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/noamc/ass6/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/dmm/Desktop/AS/cmake-build-debug"/>
+				<Option working_dir="/mnt/c/Users/noamc/ass6/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/gmake -j6 -f &quot;/home/dmm/Desktop/AS/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/gmake -j6 -f &quot;/home/dmm/Desktop/AS/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/gmake -j6 -f &quot;/home/dmm/Desktop/AS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/gmake -j6 -f &quot;/home/dmm/Desktop/AS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/noamc/ass6/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/noamc/ass6/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/noamc/ass6/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/noamc/ass6/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="ass1">
-				<Option output="/home/dmm/Desktop/AS/cmake-build-debug/ass1" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/dmm/Desktop/AS/cmake-build-debug"/>
+				<Option output="/mnt/c/Users/noamc/ass6/cmake-build-debug/ass1" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/noamc/ass6/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/include/c++/11"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
-					<Add directory="/usr/include/c++/11/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/gmake -j6 -f &quot;/home/dmm/Desktop/AS/cmake-build-debug/Makefile&quot;  VERBOSE=1 ass1"/>
-					<CompileFile command="/usr/bin/gmake -j6 -f &quot;/home/dmm/Desktop/AS/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/gmake -j6 -f &quot;/home/dmm/Desktop/AS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/gmake -j6 -f &quot;/home/dmm/Desktop/AS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/noamc/ass6/cmake-build-debug/Makefile&quot;  VERBOSE=1 ass1"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/noamc/ass6/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/noamc/ass6/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/noamc/ass6/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="ass1/fast">
-				<Option output="/home/dmm/Desktop/AS/cmake-build-debug/ass1" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/dmm/Desktop/AS/cmake-build-debug"/>
+				<Option output="/mnt/c/Users/noamc/ass6/cmake-build-debug/ass1" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/noamc/ass6/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/include/c++/11"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
-					<Add directory="/usr/include/c++/11/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/gmake -j6 -f &quot;/home/dmm/Desktop/AS/cmake-build-debug/Makefile&quot;  VERBOSE=1 ass1/fast"/>
-					<CompileFile command="/usr/bin/gmake -j6 -f &quot;/home/dmm/Desktop/AS/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/gmake -j6 -f &quot;/home/dmm/Desktop/AS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/gmake -j6 -f &quot;/home/dmm/Desktop/AS/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/noamc/ass6/cmake-build-debug/Makefile&quot;  VERBOSE=1 ass1/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/noamc/ass6/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/noamc/ass6/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/mnt/c/Users/noamc/ass6/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/dmm/Desktop/AS/AnomalyDetector.h">
+		<Unit filename="/mnt/c/Users/noamc/ass6/AnomalyDetector.h">
 			<Option target="ass1"/>
 		</Unit>
-		<Unit filename="/home/dmm/Desktop/AS/CLI.cpp">
+		<Unit filename="/mnt/c/Users/noamc/ass6/CLI.cpp">
 			<Option target="ass1"/>
 		</Unit>
-		<Unit filename="/home/dmm/Desktop/AS/CLI.h">
+		<Unit filename="/mnt/c/Users/noamc/ass6/CLI.h">
 			<Option target="ass1"/>
 		</Unit>
-		<Unit filename="/home/dmm/Desktop/AS/HybridAnomalyDetector.cpp">
+		<Unit filename="/mnt/c/Users/noamc/ass6/HybridAnomalyDetector.cpp">
 			<Option target="ass1"/>
 		</Unit>
-		<Unit filename="/home/dmm/Desktop/AS/HybridAnomalyDetector.h">
+		<Unit filename="/mnt/c/Users/noamc/ass6/HybridAnomalyDetector.h">
 			<Option target="ass1"/>
 		</Unit>
-		<Unit filename="/home/dmm/Desktop/AS/MainTrain.cpp">
+		<Unit filename="/mnt/c/Users/noamc/ass6/MainTrain.cpp">
 			<Option target="ass1"/>
 		</Unit>
-		<Unit filename="/home/dmm/Desktop/AS/Server.cpp">
+		<Unit filename="/mnt/c/Users/noamc/ass6/Server.cpp">
 			<Option target="ass1"/>
 		</Unit>
-		<Unit filename="/home/dmm/Desktop/AS/Server.h">
+		<Unit filename="/mnt/c/Users/noamc/ass6/Server.h">
 			<Option target="ass1"/>
 		</Unit>
-		<Unit filename="/home/dmm/Desktop/AS/SimpleAnomalyDetector.cpp">
+		<Unit filename="/mnt/c/Users/noamc/ass6/SimpleAnomalyDetector.cpp">
 			<Option target="ass1"/>
 		</Unit>
-		<Unit filename="/home/dmm/Desktop/AS/SimpleAnomalyDetector.h">
+		<Unit filename="/mnt/c/Users/noamc/ass6/SimpleAnomalyDetector.h">
 			<Option target="ass1"/>
 		</Unit>
-		<Unit filename="/home/dmm/Desktop/AS/anomaly_detection_util.cpp">
+		<Unit filename="/mnt/c/Users/noamc/ass6/anomaly_detection_util.cpp">
 			<Option target="ass1"/>
 		</Unit>
-		<Unit filename="/home/dmm/Desktop/AS/anomaly_detection_util.h">
+		<Unit filename="/mnt/c/Users/noamc/ass6/anomaly_detection_util.h">
 			<Option target="ass1"/>
 		</Unit>
-		<Unit filename="/home/dmm/Desktop/AS/commands.h">
+		<Unit filename="/mnt/c/Users/noamc/ass6/commands.h">
 			<Option target="ass1"/>
 		</Unit>
-		<Unit filename="/home/dmm/Desktop/AS/minCircle.cpp">
+		<Unit filename="/mnt/c/Users/noamc/ass6/minCircle.cpp">
 			<Option target="ass1"/>
 		</Unit>
-		<Unit filename="/home/dmm/Desktop/AS/minCircle.h">
+		<Unit filename="/mnt/c/Users/noamc/ass6/minCircle.h">
 			<Option target="ass1"/>
 		</Unit>
-		<Unit filename="/home/dmm/Desktop/AS/timeseries.cpp">
+		<Unit filename="/mnt/c/Users/noamc/ass6/timeseries.cpp">
 			<Option target="ass1"/>
 		</Unit>
-		<Unit filename="/home/dmm/Desktop/AS/timeseries.h">
+		<Unit filename="/mnt/c/Users/noamc/ass6/timeseries.h">
 			<Option target="ass1"/>
 		</Unit>
-		<Unit filename="/home/dmm/Desktop/AS/CMakeLists.txt">
+		<Unit filename="/mnt/c/Users/noamc/ass6/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

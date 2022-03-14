@@ -1,4 +1,4 @@
-# Install script for directory: /home/dmm/Desktop/AS
+# Install script for directory: /mnt/c/Users/noamc/ass6
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/dmm/Desktop/AS/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/mnt/c/Users/noamc/ass6/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -13,7 +13,7 @@ using namespace std;
 class CLI {
 public:
 	DefaultIO* dio;
-    Command **commands = new Command*[6];
+    vector<Command*> cliCmds;
     cliSet* cli;
 	CLI(DefaultIO* dio);
 	void start();

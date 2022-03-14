@@ -1,10 +1,3 @@
-/*
- * run2.cpp
- *
- *  Created on: 8 ????? 2019
- *      Author: Eli
- */
-
 #include <iostream>
 #include <fstream>
 #include <sys/types.h>
