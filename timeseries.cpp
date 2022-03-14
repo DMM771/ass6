@@ -20,6 +20,7 @@ TimeSeries::TimeSeries(const char* CSVfileName){
     ifstream infoFile(CSVfileName);
     //set row, colName and val for use in iteration
     string row, colName;
+
     float val;
     //check that file has opened correctly
     if(infoFile.good()){
@@ -49,11 +50,15 @@ TimeSeries::TimeSeries(const char* CSVfileName){
             column++;
         }
     }
+    vector<string> attributes;
     for (int i = 0; i < result.size(); i++) {
         string s = result[i].first;
         vector<float> v = result[i].second;
             mp.insert(pair<string, vector<float>>(s, v));
+            attributes.push_back(s);
         }
 
     infoFile.close();
+    width = mp[attributes[0]].size();
+
 }

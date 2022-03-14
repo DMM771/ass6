@@ -15,7 +15,6 @@ public:
 	DefaultIO* dio;
     Command **commands = new Command*[6];
     cliSet* cli;
-    float* option;
 	CLI(DefaultIO* dio);
 	void start();
 	virtual ~CLI();

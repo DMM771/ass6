@@ -19,7 +19,11 @@ public:
     //vector and a map to hold the values of the time series.
     vector<pair<string,vector<float>>> result;
     map<string,vector<float>> mp;
+    int width;
 public:
     TimeSeries(const char* CSVfileName);
+    int getWidth() {
+        return width;
+    }
 };
 #endif /* TIMESERIES_H_ */

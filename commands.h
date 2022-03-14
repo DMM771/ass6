@@ -15,14 +15,25 @@
 
 using namespace std;
 
+
 class DefaultIO{
 public:
 	virtual string read()=0;
 	virtual void write(string text)=0;
-	virtual void write(float f)=0;
-	virtual void read(float* f)=0;
+	virtual void write(float num)=0;
+	virtual void read(float* num)=0;
 	virtual ~DefaultIO(){}
 
+    void readAndFile(string name) {
+        ofstream  out(name);
+        string s = "";
+        s = read();
+        while(s != "done\n" && s!="done" && (strcmp(s.c_str(), "done") == 0) && (strcmp(s.c_str(), "done\n") == 0)) {
+            out << s << endl;
+            s = read();
+        }
+        out.close();
+    }
 	// you may add additional methods here
 };
 
@@ -138,19 +149,35 @@ public:
     }
 };
 
+
+struct specialReport {
+    int start;
+    int end;
+    string desc;
+    bool truePositive;
+};
+
+struct State {
+    float th;
+    vector<AnomalyReport> reps;
+    vector<specialReport> specialReps;
+    int fileSize;
+
+    State() {
+        th = 0.9;
+        fileSize = 0;
+    }
+};
 // you may edit this class
 class Command{
 protected:
 	DefaultIO* dio;
-    string name;
-    cliSet* cli;
 public:
-	Command(DefaultIO* dio,cliSet *cli) : dio(dio), cli(cli){}
+    const string desc;
+	Command(DefaultIO* dio, const string desc) : dio(dio), desc("upload a time series csv file"){}
     Command() {}
-    virtual string getName(){
-        return name;
-    }
-	virtual void execute()=0;
+
+	virtual void execute(State* state)=0;
 	virtual ~Command(){}
 };
 
@@ -159,78 +186,90 @@ public:
 class Upload : public Command
 {
 public:
-    Upload(DefaultIO* dio,cliSet* cliSet) : Command(dio, cliSet){
-        Command::name = "1.upload a time series csv file\n";
+    Upload(DefaultIO* dio) : Command(dio, "upload a time series csv file"){
     }
     string read(){
         string str1, str2;
-        while(str1 != "done"){
+        while(str1 != "done\n" && str1!="done" && (strcmp(str1.c_str(), "done") == 0) && (strcmp(str1.c_str(), "done\n") == 0)){
             str1 = dio->read();
             str2 += str1 + "\n";
         }
         return str2;
     }
-    void execute(){
-        ofstream file1;
-        ofstream file2;
-        file1.open("Train.csv");
-        file2.open("Test.csv");
-        string trainFile;
-        string testFile;
+    virtual void execute(State* state){
         dio->write("Please upload your local train CSV file.\n");
-        trainFile = read();
-        file1 << trainFile;
+        dio->readAndFile("anomalyTrain.csv");
         dio->write("Upload complete.\n");
         dio->write("Please upload your local test CSV file.\n");
-        testFile = read();
-        file2 << testFile;
+        dio->readAndFile("anomalyTest.csv");
         dio->write("Upload complete.\n");
-        file1.close();
-        file2.close();
-        this->cli->setCsvTrain("Train.csv");
-        this->cli->setCsvTest("Test.csv");
     }
 };
 
 class Settings : public Command{
 public:
-    Settings(DefaultIO *dio,cliSet *cliSet) : Command(dio, cliSet)
+    Settings(DefaultIO *dio) : Command(dio, "algorithm settings")
     {
-        Command::name = "2.algorithm settings\n";
     }
-    void execute(){
-        float f = 7;
-        float* newThreashold = &f;
-        dio->write("The current correlation threshold is 0.9\n");
-        dio->read(newThreashold);
-        while (*newThreashold < 0 || *newThreashold > 1){
-            dio->write("Please choose a value between 0 and 1.\n");
-            dio->write("Please insert new threashold.");
-            dio->read(newThreashold);
+    virtual  void execute(State* state){
+        bool isAlright=false;
+        while(!isAlright){
+            dio->write("The current correlation threshold is ");
+            dio->write(state->th);
+            dio->write("\nType a new threshold\n");
+            float num;
+            dio->read(&num);
+            if(num>0 && num<=1){
+                state->th=num;
+                isAlright=true;
+            }
+            else
+                dio->write("please choose a value between 0 and 1.\n");
         }
-        this->cli->setDetector(*newThreashold);
     }
 };
 
 class Detect : public Command{
 public:
-    Detect(DefaultIO *dio, cliSet *cliSet) : Command(dio, cliSet)
+    Detect(DefaultIO *dio) : Command(dio, "detect anomalies")
     {
-        Command::name = "3.detect anomalies.\n";
     }
-    void execute(){
-        this->cli->detector->learnNormal(*this->cli->csvTrain);
-        dio->write("Anomaly detection complete.\\n");
+    virtual void execute(State* state){
+        TimeSeries train("anomalyTrain.csv");
+        TimeSeries test("anomalyTest.csv");
+        state->fileSize = test.getWidth();
+        HybridAnomalyDetector ad;
+        ad.setThreashold(state->th);
+        ad.learnNormal(train);
+        state->reps = ad.detect(test);
+
+        specialReport fr;
+        fr.start=0;
+        fr.end=0;
+        fr.desc="";
+        fr.truePositive=false;
+        for_each(state->reps.begin(),state->reps.end(),[&fr,state](AnomalyReport& ar){
+            if(ar.timeStep==fr.end+1 && ar.description==fr.desc)
+                fr.end++;
+            else{
+                state->specialReps.push_back(fr);
+                fr.start=ar.timeStep;
+                fr.end=fr.start;
+                fr.desc=ar.description;
+            }
+        });
+        state->specialReps.push_back(fr);
+        state->specialReps.erase(state->specialReps.begin());
+
+        dio->write("anomaly detection complete.\n");
     }
 };
 class Display : public Command{
 public:
-    Display(DefaultIO *dio,cliSet *cliSet) : Command(dio,cliSet){
-        Command::name = "4.display results\n";
+    Display(DefaultIO *dio) : Command(dio, "display results"){
     }
-    void execute(){
-        vector<AnomalyReport> reports = this->cli->detector->detect(*this->cli->csvTest);
-        for(AnomalyReport ar : reports){
+    virtual void execute(State* state){
+        for(AnomalyReport ar : state->reps){
             dio->write(to_string(ar.timeStep) + "\t" + ar.description + "\n");
         }
         dio->write("Done.\n");
@@ -239,106 +278,64 @@ public:
 
 class Analyze : public Command{
 public:
-    Analyze(DefaultIO *dio,cliSet *cliSet) : Command(dio, cliSet)
+    Analyze(DefaultIO *dio) : Command(dio, "upload anomalies and analyze results")
     {
-        Command::name = "5.upload anomalies and analyze results\n";
     }
-    void execute(){
-        dio->write("Please upload your local anomalies file.\n");
-        map<string, vector<pair<long, long>>> anomalies = uniteAnomalies();
-        dio->write("Upload complete.\n");
-        long positive = 0;
-        long num1, num2;
-        string str = dio->read();
-        vector<pair<long, long>> timeSteps;
-        while (str != "done"){
-            positive++;
-            stringstream line(str);
-            string num;
-            getline(line, num,',');
-            num1 = stol(num);
-            getline(line, num, ',');
-            num2 = stol(num);
-            pair<long, long> p;
-            p.first = num1;
-            p.second = num2;
-            timeSteps.push_back(p);
-            str = dio->read();
-        }
-        long negative = this->cli->csvTest->result[0].second.size();
-        long reportsSum;
-        for(int i = 0; i < timeSteps.size(); i++){
-            reportsSum += timeSteps.at(i).second - timeSteps.at(i).first + 1;
-        }
-        negative -= reportsSum;
-        double TP = 0, FP = 0;
-        long FPCount = 0;
-        for(map<string, vector<pair<long, long>>>::iterator it = anomalies.begin(); it != anomalies.end(); ++it){
-            for(int i = 0;i < it->second.size(); i++){
-                FP++;
-                for(int j = 0; j < timeSteps.size(); j++){
-                    if(!(it->second.at(i).first > timeSteps.at(j).second || timeSteps.at(j).first > it->second.at(i).second)){
-                        TP++;
-                        FPCount++;
-                    }
-                }
+
+    bool isTruePositive(int startTime, int endTime, State* sharedState){
+        for(size_t i=0;i<sharedState->specialReps.size();i++){
+            specialReport rep=sharedState->specialReps[i];
+            if(endTime >= rep.start && rep.end >= startTime){
+                sharedState->specialReps[i].truePositive=true;
+                return true;
             }
         }
-        double TPR = TP / positive;
-        TPR = floor(TPR * 1000);
-        TPR = TPR / 1000;
-        FP -= FPCount;
-        double AFR = FP / negative;
-        AFR = floor(AFR * 1000);
-        AFR = AFR / 1000;
-        stringstream ss;
-        ss << TPR;
-        string str1 = ss.str();
-        this->dio->write("True Positive Rate: " + str1 + '\n');
-        stringstream ss1;
-        ss1 << AFR;
-        string str2 = ss1.str();
-        this->dio->write("False Positive Rate: " + str2 + '\n');
+        return false;
     }
-    map<string, vector<pair<long,long>>> uniteAnomalies(){
-        map<string, vector<pair<long, long>>> anomalies;
-        vector<pair<long, long>> timeSteps;
-        vector<AnomalyReport> reports = this->cli->detector->detect(*cli->csvTest);
-        long index1, index2, final;
-        string report1, report2;
-        index1 = reports.at(0).timeStep;
-        report1 = reports.at(0).description;
-        final = index1;
-        for(int i = 0; i < reports.size(); i++){
-            if(i != reports.size() - 1){
-                index2 = reports.at(i + 1).timeStep;
-                report2 = reports.at(i + 1).description;
+
+    virtual void execute(State* state){
+            for(int i=0;i<state->specialReps.size();i++){
+                state->specialReps[i].truePositive=false;
             }
-            if(report1 == report2 && (final + 1 == index2)){
-                final++;
-                continue;
+
+            dio->write("Please upload your local anomalies file.\n");
+            string str="";
+            float truePositive=0,total=0,positiveCount=0;
+            str=dio->read();
+        while(str != "done\n" && str!="done" && (strcmp(str.c_str(), "done") == 0) && (strcmp(str.c_str(), "done\n") == 0)) {
+                int counter=0;
+                for(int d = 0; str[counter] != ','; counter++);
+                string starter=str.substr(0, counter);
+                string ender=str.substr(counter + 1, str.length());
+                int start = stoi(starter);
+                int end = stoi(ender);
+                if(isTruePositive(start,end,state))
+                    truePositive++;
+                total+= end + 1 - start;
+                positiveCount++;
             }
-            else
-            {
-                pair<long, long> pair(index1, final);
-                timeSteps.push_back(pair);
-                anomalies.insert({report1, timeSteps});
-                report1 = report2;
-                index1 = index2;
-                final = index1;
-                timeSteps.clear();
-            }
+            dio->write("Upload complete.\n");
+            float FalsePos=0;
+            for(size_t i=0;i<state->specialReps.size();i++)
+                if(!state->specialReps[i].truePositive)
+                    FalsePos++;
+
+            float Number= state->fileSize - total;
+            float truePosR= ((int)(1000.0 * truePositive / positiveCount)) / 1000.0f;
+            float falsePosR= ((int)(1000.0 * FalsePos / Number)) / 1000.0f;
+            dio->write("True Positive Rate: ");
+            dio->write(truePosR);
+            dio->write("\nFalse Positive Rate: ");
+            dio->write(falsePosR);
+            dio->write("\n");
         }
-        return anomalies;
-    }
-};
+    };
 
 class Exit : public Command{
 public:
-    Exit(DefaultIO *dio, class cliSet *cliSet) : Command(dio, cliSet){
-        Command::name = "6.exit\n";
+    Exit(DefaultIO *dio) : Command(dio, "exit"){
     }
-    void execute()
+    virtual void execute(State* state)
     {
         return;
     }

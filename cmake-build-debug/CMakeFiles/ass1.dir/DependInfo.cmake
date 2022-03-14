@@ -4,26 +4,18 @@ set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
 
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
-  "CXX"
-  )
-# The set of files for implicit dependencies of each language:
-set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/dmmon/Desktop/Computer Science/year 2/Semester 1/Advanced programing 1/AS/CLI.cpp" "C:/Users/dmmon/Desktop/Computer Science/year 2/Semester 1/Advanced programing 1/AS/cmake-build-debug/CMakeFiles/ass1.dir/CLI.cpp.obj"
-  "C:/Users/dmmon/Desktop/Computer Science/year 2/Semester 1/Advanced programing 1/AS/HybridAnomalyDetector.cpp" "C:/Users/dmmon/Desktop/Computer Science/year 2/Semester 1/Advanced programing 1/AS/cmake-build-debug/CMakeFiles/ass1.dir/HybridAnomalyDetector.cpp.obj"
-  "C:/Users/dmmon/Desktop/Computer Science/year 2/Semester 1/Advanced programing 1/AS/MainTrain.cpp" "C:/Users/dmmon/Desktop/Computer Science/year 2/Semester 1/Advanced programing 1/AS/cmake-build-debug/CMakeFiles/ass1.dir/MainTrain.cpp.obj"
-  "C:/Users/dmmon/Desktop/Computer Science/year 2/Semester 1/Advanced programing 1/AS/SimpleAnomalyDetector.cpp" "C:/Users/dmmon/Desktop/Computer Science/year 2/Semester 1/Advanced programing 1/AS/cmake-build-debug/CMakeFiles/ass1.dir/SimpleAnomalyDetector.cpp.obj"
-  "C:/Users/dmmon/Desktop/Computer Science/year 2/Semester 1/Advanced programing 1/AS/anomaly_detection_util.cpp" "C:/Users/dmmon/Desktop/Computer Science/year 2/Semester 1/Advanced programing 1/AS/cmake-build-debug/CMakeFiles/ass1.dir/anomaly_detection_util.cpp.obj"
-  "C:/Users/dmmon/Desktop/Computer Science/year 2/Semester 1/Advanced programing 1/AS/minCircle.cpp" "C:/Users/dmmon/Desktop/Computer Science/year 2/Semester 1/Advanced programing 1/AS/cmake-build-debug/CMakeFiles/ass1.dir/minCircle.cpp.obj"
-  "C:/Users/dmmon/Desktop/Computer Science/year 2/Semester 1/Advanced programing 1/AS/timeseries.cpp" "C:/Users/dmmon/Desktop/Computer Science/year 2/Semester 1/Advanced programing 1/AS/cmake-build-debug/CMakeFiles/ass1.dir/timeseries.cpp.obj"
-  )
-set(CMAKE_CXX_COMPILER_ID "GNU")
-
-# The include file search paths:
-set(CMAKE_CXX_TARGET_INCLUDE_PATH
   )
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/dmm/Desktop/AS/CLI.cpp" "CMakeFiles/ass1.dir/CLI.cpp.o" "gcc" "CMakeFiles/ass1.dir/CLI.cpp.o.d"
+  "/home/dmm/Desktop/AS/HybridAnomalyDetector.cpp" "CMakeFiles/ass1.dir/HybridAnomalyDetector.cpp.o" "gcc" "CMakeFiles/ass1.dir/HybridAnomalyDetector.cpp.o.d"
+  "/home/dmm/Desktop/AS/MainTrain.cpp" "CMakeFiles/ass1.dir/MainTrain.cpp.o" "gcc" "CMakeFiles/ass1.dir/MainTrain.cpp.o.d"
+  "/home/dmm/Desktop/AS/Server.cpp" "CMakeFiles/ass1.dir/Server.cpp.o" "gcc" "CMakeFiles/ass1.dir/Server.cpp.o.d"
+  "/home/dmm/Desktop/AS/SimpleAnomalyDetector.cpp" "CMakeFiles/ass1.dir/SimpleAnomalyDetector.cpp.o" "gcc" "CMakeFiles/ass1.dir/SimpleAnomalyDetector.cpp.o.d"
+  "/home/dmm/Desktop/AS/anomaly_detection_util.cpp" "CMakeFiles/ass1.dir/anomaly_detection_util.cpp.o" "gcc" "CMakeFiles/ass1.dir/anomaly_detection_util.cpp.o.d"
+  "/home/dmm/Desktop/AS/minCircle.cpp" "CMakeFiles/ass1.dir/minCircle.cpp.o" "gcc" "CMakeFiles/ass1.dir/minCircle.cpp.o.d"
+  "/home/dmm/Desktop/AS/timeseries.cpp" "CMakeFiles/ass1.dir/timeseries.cpp.o" "gcc" "CMakeFiles/ass1.dir/timeseries.cpp.o.d"
   )
 
 # Targets to which this target links.

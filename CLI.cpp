@@ -2,33 +2,37 @@
 
 CLI::CLI(DefaultIO *dio1)
 {
-    float p = 7;
-    option = &p;
     dio = dio1;
     this->cli = new cliSet();
-    commands[0] = new Upload(dio, cli);
-    commands[1] = new Settings(dio, cli);
-    commands[2] = new Detect(dio, cli);
-    commands[3] = new Display(dio, cli);
-    commands[4] = new Analyze(dio, cli);
-    commands[5] = new Exit(dio, cli);
+    commands[0] = new Upload(dio);
+    commands[1] = new Settings(dio);
+    commands[2] = new Detect(dio);
+    commands[3] = new Display(dio);
+    commands[4] = new Analyze(dio);
+    commands[5] = new Exit(dio);
 }
 
 //activate the menu and execute every command
 void CLI::start()
 {
-    while (*option != 6)
+    State s;
+    int in = -1;
+    while (in != 5)
     {
         dio->write("Welcome to the Anomaly Detection Server.\n");
         dio->write("Please choose an option:\n");
+        string numStr = "1.";
         for (int i = 0; i < 6; i++)
         {
-            string ss = commands[i]->getName();
-            dio->write(ss);
+            numStr = "1.";
+            numStr[0] = ((char)(i + 1) + '0');
+            dio->write(numStr);
+            dio->write(commands[i]->desc+"\n");
         }
-        dio->read(option);
-        int x = *option - 1;
-        commands[x]->execute();
+        string input = dio->read();
+        in = input[0]-'0'-1;
+        if(in >= 0 && in <= 6)
+            commands[in]->execute(&s);
     }
 }
 
