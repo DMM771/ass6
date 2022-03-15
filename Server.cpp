@@ -59,7 +59,7 @@ Server::~Server() {
 string SocketIo::read() {
     std::string data = "";
     char input = 'y';
-    while(input != '\n') {
+    while(input != '\n' && input != NULL) {
         recv(clientNum, &input, sizeof(char), 0);
         data += input;
     }

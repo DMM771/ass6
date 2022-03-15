@@ -29,7 +29,8 @@ void CLI::start()
         string numStr = "1.";
         for (int i = 0; i < cliCmds.size(); i++) {
             numStr = "1.";
-            option = i + 1;
+            option = ++i;
+            i--;
             numStr[0] = (option + '0');
             defaultInputOutput->write(numStr);
             defaultInputOutput->write(cliCmds[i]->desc + "\n");
@@ -44,7 +45,7 @@ void CLI::start()
 
 CLI::~CLI()
 {
-    for (int i = 0; i < cliCmds.size(); i++)
+    for (int i = 0; i <= cliCmds.size()-1; i++)
     {
         delete cliCmds[i];
     }
