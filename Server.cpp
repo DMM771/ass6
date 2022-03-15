@@ -5,24 +5,24 @@
 #include <unistd.h>
 #include <csignal>
 #include "Server.h"
-#include<unistd.h>
 #include <chrono>
 #include <thread>
 
 Server::Server(int port) throw(const char *) {
-    fileDis = socket(AF_INET, SOCK_STREAM, 0);
+    fileD = socket(AF_INET, SOCK_STREAM, 0);
     boolStop = false;
-    if (fileDis < 0) {
+    if (fileD < 0) {
         throw "can't open socket";
     }
+
     server.sin_family = AF_INET;
     server.sin_addr.s_addr = INADDR_ANY;
     server.sin_port = htons(port);
-    if (bind(fileDis, (struct sockaddr *) &server, sizeof server) < 0) {
+    if (bind(fileD, (struct sockaddr *) &server, sizeof server) < 0) {
         throw "can't bind";
     }
-    int checkListen = listen(fileDis, 4);
-    if (checkListen < 0)
+    int checkListener = listen(fileD, 4);
+    if (checkListener < ZERO)
         throw "can't listen";
 }
 
@@ -36,14 +36,14 @@ void Server::start(ClientHandler &handlerOfClient) throw(const char *) {
         while (!boolStop) {
             socklen_t clintSize = sizeof(client);
             alarm(1);
-            int clientNum = accept(fileDis, (struct sockaddr *) &client, &clintSize);
-            if (clientNum > 0) {
+            int clientNum = accept(fileD, (struct sockaddr *) &client, &clintSize);
+            if (clientNum > ZERO) {
                 handlerOfClient.handle(clientNum);
                 close(clientNum);
             }
             alarm(0);
         }
-        close(fileDis);
+        close(fileD);
     });
 }
 

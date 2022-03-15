@@ -4,6 +4,7 @@
 
 #ifndef SERVER_H_
 #define SERVER_H_
+#define ZERO 0
 
 #include "CLI.h"
 #include <sys/socket.h>
@@ -14,15 +15,6 @@
 #include <sstream>
 
 
-struct sockAddress {
-    uint8_t sin_len;
-    sa_family_t family;
-    in_port_t port;
-    struct in_addr address;
-    char sin_zero[8];
-};
-
-// edit your ClientHandler interface here:
 class ClientHandler {
 public:
     virtual void handle(int clientID) = 0;
@@ -30,7 +22,6 @@ public:
 };
 
 
-// you can add helper classes here and implement on the cpp file
 
 class SocketIo : public DefaultIO {
     int clientNum;
@@ -48,18 +39,17 @@ public:
     virtual void handle(int clientID) {
         SocketIo io(clientID);
         CLI cli(&io);
+
         cli.start();
     }
 };
 
 
-// implement on Server.cpp
 class Server {
-    std::thread *t; // the thread to run the initTime() method in
-    int fileDis;
+    std::thread *t;
+    int fileD;
     sockaddr_in server;
     sockaddr_in client;
-    int clientNum;
     volatile bool boolStop;
 
 public:
